@@ -8,7 +8,7 @@ class NewRequestTest{
         NewRequestPage.searchresult.click();
         NewRequestPage.SelectBranch.click();
         NewRequestPage.SelectedBranch.click();
-        NewRequestPage.ContinueBtn.click();
+        NewRequestPage.ContinueBtn.trigger('click');
     }
 
 }
