@@ -33,3 +33,21 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     // Return false to prevent the error from failing the test
     return false;
   });
+  /*Cypress.Commands.overwrite('click', (originalFn, ...args) => {
+     originalFn(...args);
+      cy.wait(10000); // Adjust the wait time as needed
+    
+  });
+  
+  Cypress.Commands.overwrite('type', (originalFn, ...args) => {
+    originalFn(...args); // Call original function without returning a promise
+    return cy.wait(10000); // Chain wait without returning a new promise
+  });
+  Cypress.Commands.overwrite('get', (originalFn, ...args) => {
+    originalFn(...args);
+     cy.wait(10000); // Adjust the wait time as needed
+   
+ });*/
+  
+  // Add more commands as needed (e.g., select, submit, etc.)
+  
