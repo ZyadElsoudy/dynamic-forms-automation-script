@@ -61,7 +61,23 @@ get EffectiveDate(){
 }
 //Selection of date 
 get SelectedeffectiveDate(){
-    return cy.get('div[class="ant-picker-cell-inner"]').contains("29");
+    return cy.get('div[class="ant-picker-cell-inner"]').contains("15");
+}
+//getting Beazly Limit
+get Beazlyalimit(){
+    return cy.get('span[class="ant-select-selection-placeholder"]').contains("Beazly Limit");
+}
+//getting selected Beazly Limit
+get SelectedBeazlylimit(){
+    return cy.get('.ant-select-item-option-content').contains("$ 3,000,000");
+}
+//getting Beazly Retention
+get BeazlyaRetention(){
+    return cy.get('span[class="ant-select-selection-placeholder"]').contains("Beazly Retention");
+}
+//getting selected Beazly retention
+get SelectedBeazlyRetention(){
+    return cy.get('.ant-select-item-option-content').contains("$ 50,000");
 }
 }
 module.exports=new AppFormPage();

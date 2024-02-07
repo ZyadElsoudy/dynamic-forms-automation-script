@@ -30,6 +30,15 @@ Addingclaims(){
     AppFormPage.EffectiveDate.click();
     cy.wait(10000);
     AppFormPage.SelectedeffectiveDate.click();
+    cy.wait(10000);
+    AppFormPage.Beazlyalimit.click({force:true});
+    cy.wait(10000);
+    AppFormPage.SelectedBeazlylimit.click();
+    cy.wait(10000);
+    AppFormPage.BeazlyaRetention.click({force:true});
+    cy.wait(10000);
+    AppFormPage.SelectedBeazlyRetention.click();
+
 }
     
 }
