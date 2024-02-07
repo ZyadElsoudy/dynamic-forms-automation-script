@@ -4,7 +4,7 @@ class NewRequestTest{
         NewRequestPage.AddBtn.click();
         NewRequestPage.selectNewReq.click();
         NewRequestPage.SelectClient.click();
-        NewRequestPage.SelectClient.type('zooz')
+        NewRequestPage.SelectClient.type('sara ahmed')
         NewRequestPage.searchresult.click();
         NewRequestPage.SelectBranch.click();
         NewRequestPage.SelectedBranch.click();
