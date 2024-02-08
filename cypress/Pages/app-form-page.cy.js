@@ -79,5 +79,23 @@ get BeazlyaRetention(){
 get SelectedBeazlyRetention(){
     return cy.get('.ant-select-item-option-content').contains("$ 50,000");
 }
+get Coalition_Limit_List(){
+    return cy.get('span[class="ant-select-selection-placeholder"]').contains("Coalition Limit");
+}
+get Select_CoalitionLimit(){
+    return cy.get('.ant-select-item-option-content').contains("$ 25,000");
+}
+get Coalition_Retention_List(){
+    return cy.get('span[class="ant-select-selection-placeholder"]').contains("Coalition Retention");
+}
+get Select_CoalitionRetention(){
+    return cy.get('.ant-select-item-option-content').contains("$ 500");
+}
+get AddCrimeCoverage(){
+    return cy.get('input[type="radio"][name="coverage.cfc.addCrimeCoverage"]').eq(0);
+}
+get AddTechnologyErrorsandOmissions(){
+    return cy.get('input[type="radio"][name="coverage.everest.technologyErrorsAndOmissions"]').eq(0);
+}
 }
 module.exports=new AppFormPage();
