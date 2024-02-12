@@ -18,47 +18,48 @@ class AppFormPage{
     get SelectIndustryType(){
             return cy.get('.ant-select-item-option-content').contains('Administration of Education Programs');      
     }
-    /*
+    
     get DatalockIndustry(){
-        return cy.get('span[class="ant-select-selector"]').contains('Business Type');
+        return cy.get('[path="applicant.datalock.industryName"] > .tru-form-item > .tru-column > .select-with-filter-container > .tooltip-container > .tru-single-select-arrow-wrapper > .ant-select > .ant-select-selector');
     } 
     get SelectDatalockIndustry(){
             return cy.get('.ant-select-item-option-content').contains('Agriculture');      
     }
-    */
+    
 
     get BusinessDescription(){
         return cy.get('textarea[class="tru-textarea"][placeholder="Business Description"]');
     }
-     /*
+     
      
     get AdultContent(){
-        return cy.get('input[type="checkbox"][path=coverage.shared.engagedIndustries.adult"]');
+        return cy.get('[path="coverage.shared.engagedIndustries.adult"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');
     }
+    
     get Cannabis(){
-        return cy.get('input[type="checkbox"][path="coverage.shared.engagedIndustries.cannabis"]').eq(0);
+        return cy.get('[path="coverage.shared.engagedIndustries.cannabis"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');
     }
     get CareProvider(){
-        return cy.get('input[type="checkbox"][path="coverage.shared.engagedIndustries.careProvider"]').eq(0);
+        return cy.get('[path="coverage.shared.engagedIndustries.careProvider"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');
     }
     get CryptocurrencyOrBlockchain(){
-        return cy.get('input[type="checkbox"][path="coverage.shared.engagedIndustries.cryptoCurrency"]').eq(0);
+        return cy.get('[path="coverage.shared.engagedIndustries.cryptoCurrency"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');
     }
     get DataProcessing(){
-        return cy.get('input[type="checkbox"][path="coverage.shared.engagedIndustries.dataProcessing"]').eq(0);
+        return cy.get('[path="coverage.shared.engagedIndustries.dataProcessing"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');
     }
     get DebtCollection(){
-        return cy.get('input[type="checkbox"][path="coverage.shared.engagedIndustries.debtCollection"]').eq(0);
+        return cy.get('[path="coverage.shared.engagedIndustries.debtCollection"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');
     }
     get Gambling(){
-        return cy.get('input[type="checkbox"][path="coverage.shared.engagedIndustries.gambling"]').eq(0);
+        return cy.get('[path="coverage.shared.engagedIndustries.gambling"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');
     }
     get PaymentProcessingn(){
-        return cy.get('input[type="checkbox"][path="coverage.shared.engagedIndustries.paymentProcessing"]').eq(0);
+        return cy.get('[path="coverage.shared.engagedIndustries.paymentProcessing"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');
     }
     get StorageHosting(){
-        return cy.get('input[type="checkbox"][path="coverage.shared.engagedIndustries.storageHosting"]').eq(0);
-    } */
+        return cy.get('[path="coverage.shared.engagedIndustries.storageHosting"] >.tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');
+    } 
 
     get NumberOfEmployees    (){
         return cy.get('input[type="number"][placeholder="Number Of Employees"]');
@@ -94,7 +95,7 @@ class AppFormPage{
 
     get TypeOfCoverage(){
         return cy.get('span.ant-select-selection-placeholder').contains('Type of Coverage');
-        //return cy.get('div[class="ant-select-selection-placeholder"]').contains('Type of Coverage');
+     
      }
         
      get SelectCoverage(){

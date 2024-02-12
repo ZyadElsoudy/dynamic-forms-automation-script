@@ -12,16 +12,29 @@ class AppFormTest{
         AppFormPage.SelectBusinessType.click();
         AppFormPage.scrollSaraSec.scrollIntoView();
         cy.wait(5000);
-
-        //AppFormPage.IndustryType.Select('Administration of Education Programs');
         AppFormPage.IndustryType.click();
         cy.wait(5000);
         AppFormPage.SelectIndustryType.click();
         cy.wait(5000);
+        AppFormPage.DatalockIndustry.click();
+        cy.wait(5000);
+        AppFormPage.SelectDatalockIndustry.click();
+        cy.wait(5000);
         AppFormPage.BusinessDescription.type('business');
         cy.wait(5000);
-       // AppFormPage.AdultContent.check();
+       AppFormPage.AdultContent.click();
+       AppFormPage.Cannabis.click();
+       AppFormPage.CareProvider.click();
+       AppFormPage.CryptocurrencyOrBlockchain.click();
+       AppFormPage.DataProcessing.click();
+       AppFormPage.DebtCollection.click();
+       AppFormPage.Gambling.click();
+       AppFormPage.PaymentProcessingn.click();
+       AppFormPage.StorageHosting.click();
+
        AppFormPage.NumberOfEmployees.type('3');
+       AppFormPage.NumberOfNonUSEmployees.dblclick().clear();
+       cy.wait(5000);
        AppFormPage.NumberOfNonUSEmployees.type('3');
        AppFormPage.AnnualRevenueLastFinancialYear.type('1000000');
        AppFormPage.GrossProfitLastFinancialYear.type('1000001');
