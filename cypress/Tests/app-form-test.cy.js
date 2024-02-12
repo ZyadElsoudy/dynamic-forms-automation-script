@@ -3,25 +3,24 @@ import AppFormPage from "../Pages/app-form-page.cy.js";
 
 class AppFormTest{
     Addingclaims(){
-        //cy.scrollTo(0, 500)
-        //cy.get('#rc_select_16')
+        
 
-        AppFormPage.scrollSaraSec.scrollIntoView();
-        cy.wait(5000);
-        AppFormPage.BusinessType.click({force:true});
-        AppFormPage.SelectBusinessType.click();
-        AppFormPage.scrollSaraSec.scrollIntoView();
-        cy.wait(5000);
-        AppFormPage.IndustryType.click();
-        cy.wait(5000);
-        AppFormPage.SelectIndustryType.click();
-        cy.wait(5000);
-        AppFormPage.DatalockIndustry.click();
-        cy.wait(5000);
-        AppFormPage.SelectDatalockIndustry.click();
-        cy.wait(5000);
-        AppFormPage.BusinessDescription.type('business');
-        cy.wait(5000);
+       AppFormPage.scrollSaraSec.scrollIntoView();
+       cy.wait(5000);
+       AppFormPage.BusinessType.click({force:true});
+       AppFormPage.SelectBusinessType.click();
+       AppFormPage.scrollSaraSec.scrollIntoView();
+       cy.wait(5000);
+       AppFormPage.IndustryType.click();
+       cy.wait(5000);
+       AppFormPage.SelectIndustryType.click();
+       cy.wait(5000);
+       AppFormPage.DatalockIndustry.click();
+       cy.wait(5000);
+       AppFormPage.SelectDatalockIndustry.click();
+       cy.wait(5000);
+       AppFormPage.BusinessDescription.type('business');
+       cy.wait(5000);
        AppFormPage.AdultContent.click();
        AppFormPage.Cannabis.click();
        AppFormPage.CareProvider.click();
@@ -31,7 +30,6 @@ class AppFormTest{
        AppFormPage.Gambling.click();
        AppFormPage.PaymentProcessingn.click();
        AppFormPage.StorageHosting.click();
-
        AppFormPage.NumberOfEmployees.type('3');
        AppFormPage.NumberOfNonUSEmployees.dblclick().clear();
        cy.wait(5000);
@@ -53,8 +51,6 @@ class AppFormTest{
        AppFormPage.TypeOfCoverage.click({force:true});
        cy.wait(5000);
        AppFormPage.SelectCoverage.click();
-
-       
 
 
     }
