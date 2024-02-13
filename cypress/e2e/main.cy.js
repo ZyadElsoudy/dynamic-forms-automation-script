@@ -2,7 +2,6 @@ import { it } from "mocha"
 import LoginTest from "../Tests/login-test.cy.js";
 import NewRequestTest from "../Tests/new-request-test.cy.js";
 import AppFormTest from "../Tests/app-form-test.cy.js";
-
 describe('Dynamic Forms',()=>{
   
     before('Visit URL Before any Execution' ,()=>{
@@ -13,8 +12,10 @@ describe('Dynamic Forms',()=>{
     LoginTest.LoginWithValidCredentials();
     NewRequestTest.CreateNewRequest();
 
+    //AppFormTest.ApplicantSection();
 
-    AppFormTest.ApplicantSection();
+
+    AppFormTest.Addingclaims();
 
   }) 
 })
