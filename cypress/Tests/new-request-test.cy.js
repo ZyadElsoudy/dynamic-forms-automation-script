@@ -1,3 +1,4 @@
+
 import NewRequestPage from "../Pages/new-request-page.cy.js";
 class NewRequestTest{
     CreateNewRequest(){
@@ -10,8 +11,8 @@ class NewRequestTest{
         NewRequestPage.SelectClient.click();
         NewRequestPage.SelectClient.type('zooz');
         NewRequestPage.searchresult.click();
-        NewRequestPage.SelectBranch.click();
-        NewRequestPage.SelectedBranch.click();
+        //NewRequestPage.SelectBranch.click();
+        //NewRequestPage.SelectedBranch.click();
         NewRequestPage.ContinueBtn.trigger('click');
     }
 
