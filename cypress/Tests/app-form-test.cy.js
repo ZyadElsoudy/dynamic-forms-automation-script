@@ -1,11 +1,63 @@
 //Add Your Code Here
-import AppFormPage from "../Pages/app-form-page.cy.js"; 
 
+import AppFormPage from "../Pages/app-form-page.cy.js";
+//from 89 to 110 
 class AppFormTest{
-    Addingclaims(){
-        
+Addingclaims(){
+    AppFormPage.AwareOfPossiblePendingClaims.click();
+    cy.wait(5000);
+    AppFormPage.RecentIncidentsAndClaimsAreClosed.click();
+    cy.wait(5000);
+    AppFormPage.NumOfClaims.type('5');
+    cy.wait(5000);
+    AppFormPage.ExceedingLimit.scrollIntoView();
+    AppFormPage.ExceedingLimit.click();
+    cy.wait(5000);
+    AppFormPage.NatureOflegalAction.click({force:true});
+    cy.wait(5000);
+    AppFormPage.SelectedNatureOfLegalAction.click();
+    cy.wait(5000);
+    AppFormPage.DescribtionOfRecentClaims.type('Description');
+    AppFormPage.AmountOfClaims.type('1000');
+    cy.wait(5000);
+    AppFormPage.RemediationFollowingRecentIncidents.click({force:true});
+    cy.wait(5000);
+    AppFormPage.SelectedRemediation.click();
+    cy.wait(5000);
+    AppFormPage.CheckAwareOfnewClaims.click();
+    AppFormPage.NewClaimsExplanation.type('explanation');
+    cy.wait(5000);
+    AppFormPage.BbrAdditionalClaim.click();
+    AppFormPage.EffectiveDate.click();
+    cy.wait(5000);
+    AppFormPage.SelectedeffectiveDate.click();
+    cy.wait(5000);
+    AppFormPage.Beazlyalimit.click({force:true});
+    cy.wait(5000);
+    AppFormPage.SelectedBeazlylimit.click();
+    cy.wait(5000);
+    AppFormPage.BeazlyaRetention.click({force:true});
+    cy.wait(5000);
+    AppFormPage.SelectedBeazlyRetention.click();
+    cy.wait(5000);
+    AppFormPage.Coalition_Limit_List.click({force:true});
+    cy.wait(5000);
+    AppFormPage.Select_CoalitionLimit.click({force:true});
+    cy.wait(5000);
+    AppFormPage.Coalition_Retention_List.click({force:true});
 
-       AppFormPage.scrollSaraSec.scrollIntoView();
+    cy.wait(5000);
+    AppFormPage.Select_CoalitionRetention.click({force:true});
+    // cy.wait(5000);
+    // AppFormPage.AddCrimeCoverage.click();
+    cy.wait(5000);
+    AppFormPage.AddTechnologyErrorsandOmissions.click();
+
+  
+  
+  
+  // Sara Actions ////////////////////////////////////////////////
+  AppFormPage.scrollSaraSec.scrollIntoView();
        cy.wait(5000);
        AppFormPage.BusinessType.click({force:true});
        AppFormPage.SelectBusinessType.click();
@@ -51,11 +103,9 @@ class AppFormTest{
        AppFormPage.TypeOfCoverage.click({force:true});
        cy.wait(5000);
        AppFormPage.SelectCoverage.click();
-
-
-    }
-
-
+  // Sara//////////////////////////////////////////////////////////////////////
+}
     
 }
-module.exports=new AppFormTest();
+module.exports=new AppFormTest()
+

@@ -8,7 +8,7 @@ class NewRequestTest{
         NewRequestPage.SelectNewRequest.type('us');
         NewRequestPage.RequestOption.click();
         NewRequestPage.SelectClient.click();
-        NewRequestPage.SelectClient.type('sara ahmed');
+        NewRequestPage.SelectClient.type('zooz');
         NewRequestPage.searchresult.click();
         NewRequestPage.SelectBranch.click();
         NewRequestPage.SelectedBranch.click();
