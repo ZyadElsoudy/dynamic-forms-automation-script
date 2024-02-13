@@ -56,7 +56,7 @@ Addingclaims(){
 
     AppFormPage.UseClientDataToggle.click();
     //Sara's Actions
-    AppFormPage.scrollSaraSec.scrollIntoView();
+    AppFormPage.ScrollToCity.scrollIntoView();
        cy.wait(5000);
        AppFormPage.BusinessType.click({force:true});
        AppFormPage.SelectBusinessType.click();
