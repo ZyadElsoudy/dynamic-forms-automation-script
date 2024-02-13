@@ -97,7 +97,10 @@ get AddCrimeCoverage(){
 get AddTechnologyErrorsandOmissions(){
     return cy.get('input[type="radio"][name="coverage.everest.technologyErrorsAndOmissions"]').eq(0);
 }
-  get scrollSaraSec(){
+ 
+// Sara's Section
+
+get scrollSaraSec(){
 
         return cy.get('[path="applicant.shared.city"] > .tru-form-item');
     } 
@@ -242,7 +245,7 @@ get AddTechnologyErrorsandOmissions(){
 
          return cy.get('.ant-select-item-option-content').contains("ADMITTED");  
      }
-     
+     // End of sara's section
 }
 module.exports=new AppFormPage();
 
