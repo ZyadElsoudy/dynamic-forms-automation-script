@@ -11,8 +11,8 @@ class NewRequestTest{
         NewRequestPage.SelectClient.click();
         NewRequestPage.SelectClient.type('zooz');
         NewRequestPage.searchresult.click();
-        //NewRequestPage.SelectBranch.click();
-        //NewRequestPage.SelectedBranch.click();
+        NewRequestPage.SelectBranch.click();
+        NewRequestPage.SelectedBranch.click();
         NewRequestPage.ContinueBtn.trigger('click');
     }
 

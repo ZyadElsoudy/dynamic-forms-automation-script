@@ -60,7 +60,7 @@ Addingclaims(){
        cy.wait(5000);
        AppFormPage.BusinessType.click({force:true});
        AppFormPage.SelectBusinessType.click();
-       AppFormPage.scrollSaraSec.scrollIntoView();
+       AppFormPage.ScrollToCity.scrollIntoView();
        cy.wait(5000);
        AppFormPage.IndustryType.click();
        cy.wait(5000);
@@ -87,7 +87,8 @@ Addingclaims(){
        AppFormPage.NumberOfNonUSEmployees.type('3');
        AppFormPage.AnnualRevenueLastFinancialYear.type('1000000');
        AppFormPage.GrossProfitLastFinancialYear.type('1000001');
-       AppFormPage.NonUSRevenue.click();
+       cy.wait(5000);
+       AppFormPage.NonUSRevenue.click({force:true});
        cy.wait(5000);
        AppFormPage.NonUSRevenueAmount.dblclick().clear();
        cy.wait(5000);
