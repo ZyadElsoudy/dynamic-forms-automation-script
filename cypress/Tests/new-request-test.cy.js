@@ -1,3 +1,4 @@
+
 import NewRequestPage from "../Pages/new-request-page.cy.js";
 class NewRequestTest{
     CreateNewRequest(){
