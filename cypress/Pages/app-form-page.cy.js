@@ -1,43 +1,70 @@
 //Add Your Code Here
 class AppFormPage{
-get ApplicantName (){
-    return cy.get('input[type="text"][placeholder="Associate Name"]')}
+    // Maggies part from 9 to 24
+    // Getting Applicant name 
+get ApplicantName (){return cy.get('input[type="text"][placeholder="Associate Name"]')}
 
-
+    //geeting lockton office 
 get LocktonOffice(){return cy.get('span.ant-select-selection-placeholder').contains('Lockton Office');}
-get SelectLocktonOffice(){return cy.get('.ant-select-item-option-content').contains('Los Angeles');  }
+
+    //Selecting a lockton office from the drop down
+get SelectLocktonOffice(){return cy.get('.ant-select-item-option-content').contains('Los Angeles');}
+
+    //Selecting Legal company name
 get LegalCompanyName (){ return  cy.get('input[type="text"][placeholder="Legal Company name"]');}
+
+    //selecting Trading name
 get TradingName (){ return cy.get('input[type="text"][placeholder="Legal Company name"]');}
+
+    //Selecting TradeType
 get TradeType(){return cy.get('[path="applicant.everest.tradeType"] > .tru-form-item');}
+
+     //Select a value from  TradeType dropdown
 get SelectedTradeType (){ return  cy.get('[path="applicant.everest.tradeType"] > .tru-form-item').contains('Also Known As');}
+
+    // Selecting Address Field
 get SearchForAddress (){ return cy.get('.location-search-wrapper');}
+
+    // Selecting Suite/Unit/Floor field
 get SuiteUnitFloor(){ return cy.get('input[type="text"][placeholder="Suite/Unit/Floor Etc."]')};
+
+
+
+
 // The following fields are auto filled with address 
 /** 
-get Street()
-{return cy.get('input[type="text"][placeholder="Street"]')}
+ 
+    // Getting Street Field
+get Street() {return cy.get('input[type="text"][placeholder="Street"]')}
 
-get City()
-{return cy.get('input[type="text"][placeholder="City"]')}
+    // Getting City Field
+get City() {return cy.get('input[type="text"][placeholder="City"]')}
 
-get State ()
-{ return cy.get('#rc_select_13') }
+    // Getting State Field
+get State () { return cy.get('#rc_select_13') }
 
-get SelectedState()
-{ return cy.get('#rc_select_13').contains("Denver") }
+   // Select a state from the dropdown
+get SelectedState() { return cy.get('#rc_select_13').contains("Denver") }
 
-get ZipCode()
-{return cy.get('input[type="text"][placeholder="Zip Code"]')}
+   // Getting Zipcode fields
+get ZipCode() {return cy.get('input[type="text"][placeholder="Zip Code"]')}
 **/
 
+    // Select Website field
 get Website(){ return cy.get('input[type="text"][placeholder="Website"]');}
+
+    // Select Use Client data toggle
 get UseClientDataToggle(){return cy.get('[path="applicant.shared.sameAsClient"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch');}
   
 // Emad and Zyad's Section
-get AwareOfPossiblePendingClaims(){cy.get('button[class="tru-button link "]').contains('Claims').click();
-    return cy.get('input[type="radio"][name="claims.shared.awareOfPossibleClaims"]').eq(0);}
+get AwareOfPossiblePendingClaims(){
+    cy.get('button[class="tru-button link "]').contains('Claims').click();
+    return cy.get('input[type="radio"][name="claims.shared.awareOfPossibleClaims"]').eq(0);
+}
 // getting Recent Incidents/claims Are Closed field
-get RecentIncidentsAndClaimsAreClosed(){return cy.get('input[type="radio"][name="claims.shared.recentIncidentsAreClosed"]').eq(0);}
+get RecentIncidentsAndClaimsAreClosed(){
+    return cy.get('input[type="radio"][name="claims.shared.recentIncidentsAreClosed"]').eq(0);
+}
 //getting Number of claims text field 
 get NumOfClaims (){
     return cy.get('input.tru-number-input[placeholder="How many claims in total?"]');
@@ -82,6 +109,8 @@ get NewClaimsExplanation(){
 get BbrAdditionalClaim(){
     return cy.get('input[type="radio"][name="claims.bbr.bbrAdditionalClaimQuestion"]').eq(0);
 }
+
+
 // Coverage Section
 //getting Effective Date 
 get EffectiveDate(){
