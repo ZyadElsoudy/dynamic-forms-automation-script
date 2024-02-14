@@ -61,7 +61,7 @@ get EffectiveDate(){
 }
 //Selection of date 
 get SelectedeffectiveDate(){
-    return cy.get('div[class="ant-picker-cell-inner"]').contains("15");
+    return cy.get('div[class="ant-picker-cell-inner"]').contains("20");
 }
 //getting Beazly Limit
 get Beazlyalimit(){
@@ -83,13 +83,15 @@ get Coalition_Limit_List(){
     return cy.get('span[class="ant-select-selection-placeholder"]').contains("Coalition Limit");
 }
 get Select_CoalitionLimit(){
-    return cy.get('.ant-select-item-option-content').contains("$ 25,000");
+    return cy.get('div[class="ant-select-item ant-select-item-option ant-select-item-option-active"][title="$ 25,000"]');
+        //'.ant-select-item-option-content').contains("$ 25,000");
 }
 get Coalition_Retention_List(){
     return cy.get('span[class="ant-select-selection-placeholder"]').contains("Coalition Retention");
 }
 get Select_CoalitionRetention(){
-    return cy.get('.ant-select-item-option-content').contains("$ 500");
+    return cy.get('div[class="ant-select-item ant-select-item-option ant-select-item-option-active"][title="$ 500"]');
+        //'.ant-select-item-option-content').contains("$ 500");
 }
 get AddCrimeCoverage(){
     return cy.get('input[type="radio"][name="coverage.cfc.addCrimeCoverage"]').eq(0);
