@@ -56,6 +56,129 @@ get Website(){ return cy.get('input[type="text"][placeholder="Website"]');}
     // Select Use Client data toggle
 get UseClientDataToggle(){return cy.get('[path="applicant.shared.sameAsClient"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch');}
   
+
+
+// Sara's Section
+//scroll to city field 
+get ScrollToCity(){return cy.get('[path="applicant.shared.city"] > .tru-form-item');} 
+// getting Business Type  
+get BusinessType(){return cy.get('span.ant-select-selection-placeholder').contains('Business Type');}
+//getting select business type 
+get SelectBusinessType(){return cy.get('.ant-select-item-option-content').contains('Individual');}
+// getting industry Type  
+get IndustryType(){return cy.get('[path="applicant.shared.industryType"] > .tru-form-item > .tru-column > .select-with-filter-container > .tooltip-container > .tru-single-select-arrow-wrapper > .ant-select > .ant-select-selector');} 
+//getting select industry type 
+get SelectIndustryType(){return cy.get('.ant-select-item-option-content').contains('Administration of Education Programs');}
+// getting Datalock Industry    
+get DatalockIndustry(){return cy.get('[path="applicant.datalock.industryName"] > .tru-form-item > .tru-column > .select-with-filter-container > .tooltip-container > .tru-single-select-arrow-wrapper > .ant-select > .ant-select-selector');}
+//getting select Datalock Industry 
+get SelectDatalockIndustry(){return cy.get('.ant-select-item-option-content').contains('Agriculture');}
+//getting Business Description 
+get BusinessDescription(){return cy.get('textarea[class="tru-textarea"][placeholder="Business Description"]');}
+//getting Adult Content 
+get AdultContent(){return cy.get('[path="coverage.shared.engagedIndustries.adult"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');}
+//getting Cannabis
+get Cannabis(){return cy.get('[path="coverage.shared.engagedIndustries.cannabis"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');}
+//getting care provider
+get CareProvider(){return cy.get('[path="coverage.shared.engagedIndustries.careProvider"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');}
+//getting Cryptocurrency or Blockchain
+get CryptocurrencyOrBlockchain(){return cy.get('[path="coverage.shared.engagedIndustries.cryptoCurrency"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');}
+//getting data Processing
+get DataProcessing(){return cy.get('[path="coverage.shared.engagedIndustries.dataProcessing"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');}
+//getting Debt Collection
+get DebtCollection(){return cy.get('[path="coverage.shared.engagedIndustries.debtCollection"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');}
+//getting Gambling
+get Gambling(){return cy.get('[path="coverage.shared.engagedIndustries.gambling"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');}
+//getting Payment Processing
+get PaymentProcessingn(){return cy.get('[path="coverage.shared.engagedIndustries.paymentProcessing"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');}
+//getting Storage Hosting
+get StorageHosting(){return cy.get('[path="coverage.shared.engagedIndustries.storageHosting"] >.tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');} 
+//getting Number Of Employees
+get NumberOfEmployees(){return cy.get('input[type="number"][placeholder="Number Of Employees"]');}
+//getting Number of Non US Employees
+get NumberOfNonUSEmployees(){return cy.get('input[type="number"][placeholder="Number of Non US Employees"]');}
+//getting Annual Revenue for the last complete financial year $
+get AnnualRevenueLastFinancialYear (){return cy.get('input[type="text"][placeholder="Annual Revenue for the last complete financial year $"]');}
+//getting Gross Profit for the last complete financial year $
+get GrossProfitLastFinancialYear (){return cy.get('input[type="text"][placeholder="Gross Profit for the last complete financial year $"]');} 
+//getting Non US Revenue
+get NonUSRevenue(){return cy.get('input[type="radio"][name="applicant.shared.globalRevenue"]').eq(0);}
+//getting Non US Revenue Percentage (%)
+get NonUSRevenueAmount(){return cy.get('input.tru-number-input[placeholder="Non US Revenue Percentage (%)"]');}
+//getting EEA Revenue
+get EEARevenue(){return cy.get('input[type="radio"][name="applicant.datalock.eeaRevenue"]').eq(0);}
+//getting High Risk Territories
+get HighRiskTerritories(){return cy.get('input[type="radio"][name="applicant.datalock.highRiskTerritories"]').eq(1);}
+//getting Include TRIA
+get IncludeTRIA(){return cy.get('input[type="radio"][name="applicant.datalock.includeTria"]').eq(1);} 
+//getting Change in Business Activities
+get ChangeInBusinessActivities(){return cy.get('input[type="radio"][name="applicant.bbr.mergerAcquisition"]').eq(1);} 
+//getting Type of Coverage
+get TypeOfCoverage(){return cy.get('span.ant-select-selection-placeholder').contains('Type of Coverage');}  
+//getting select addmitted Type of Coverage
+get SelectCoverage(){return cy.get('.ant-select-item-option-content').contains("ADMITTED"); }
+
+     // End of sara's section
+     get PersonallyIdentifiableInfo(){
+        return cy.get('input[type="radio"][name="cyberRisk.shared.personallyIdentifiableInformation"]').eq(0);}
+    get EstimatePersonallyIdentifiableInfo(){
+        return cy.get('input.tru-number-input[placeholder="Estimate"]')}
+        
+    // "Medical records" field
+    get MedicalRecords(){
+        return cy.get('input[type="radio"][name="cyberRisk.shared.medicalRecords"]').eq(0);}
+    
+    // "Financial information" field
+    get FinancialInformation(){
+        return cy.get('input[type="radio"][name="cyberRisk.shared.financialInformation"]').eq(0);}
+    get EstimateFinancialInformation(){
+        return cy.get('[path="cyberRisk.shared.numberOfFinancialInformation"]');}
+    
+    // "Driver license numbers" field
+    get DriverLicenseNumber(){
+        return cy.get('input[type="radio"][name="cyberRisk.shared.driverLicence"]').eq(0);}
+    get EstimateDriverLicense(){
+        return cy.get('[path="cyberRisk.shared.numberOfDriverLicence"]');}
+    
+    // "Social Security/National Insurance numbers" field
+    get SocialSecurity(){
+        return cy.get('input[type="radio"][name="cyberRisk.shared.socialSecurity"]').eq(1);}
+    
+    // "PCI information" field
+    get PCIinformation(){
+        return cy.get('input[type="radio"][name="cyberRisk.shared.PCIInformation"]').eq(1);}
+    
+    //  "Performs Regular Backups" field
+    get PerformsRegularBackups(){
+        return cy.get('input[type="radio"][name="cyberRisk.shared.performRegularBackups"]').eq(1);}
+    
+    // "Protect Backups" field
+    get ProtectBackups(){
+        return cy.get('input[type="radio"][name="cyberRisk.shared.protectBackups"]').eq(1);}
+    
+    // "Uses Email Filtering" field
+    get EmailFiltering(){
+        return cy.get('input[type="radio"][name="cyberRisk.shared.usesEmailFiltering"]').eq(1);}
+    
+    // "Access web-based email" field
+    get AccessWebBasedEmail(){
+        return cy.get('input[type="radio"][name="cyberRisk.shared.accessWebBasedEmail"]').eq(0);}
+    
+    // "Uses Anti-Virus and Anti-Threat Protection" field
+    get AntiVirus(){
+        return cy.get('input[type="radio"][name="cyberRisk.shared.usesAntiVirus"]').eq(1);}
+    
+    //  "Uses Encryption on Portable Devices" field
+    get Encryption(){
+        return cy.get('input[type="radio"][name="cyberRisk.shared.encryptData"]').eq(1);}
+    // "Data Downloaded to Portable Devices" field
+    get DownloadedToPortableDevices(){
+        return cy.get('input[type="radio"][name="cyberRisk.shared.sensitiveUnencryptedData"]').eq(0);}
+    
+    // "Manages Critical Patching on a Schedule" field
+    get CriticalPatching(){
+        return cy.get('input[type="radio"][name="cyberRisk.shared.criticalPatching"]').eq(0);}
+    
 // Emad and Zyad's Section
 get AwareOfPossiblePendingClaims(){
     cy.get('button[class="tru-button link "]').contains('Claims').click();
@@ -119,7 +242,7 @@ get EffectiveDate(){
 }
 //Selection of date 
 get SelectedeffectiveDate(){
-    return cy.get('div[class="ant-picker-cell-inner"]').contains("15");
+    return cy.get('div[class="ant-picker-cell-inner"]').contains("20");
 }
 //getting Beazly Limit
 get Beazlyalimit(){
@@ -156,67 +279,7 @@ get AddTechnologyErrorsandOmissions(){
     return cy.get('input[type="radio"][name="coverage.everest.technologyErrorsAndOmissions"]').eq(0);
 }
  
-// Sara's Section
-//scroll to city field 
-get ScrollToCity(){return cy.get('[path="applicant.shared.city"] > .tru-form-item');} 
-// getting Business Type  
-get BusinessType(){return cy.get('span.ant-select-selection-placeholder').contains('Business Type');}
-//getting select business type 
-get SelectBusinessType(){return cy.get('.ant-select-item-option-content').contains('Individual');}
-// getting industry Type  
-get IndustryType(){return cy.get('[path="applicant.shared.industryType"] > .tru-form-item > .tru-column > .select-with-filter-container > .tooltip-container > .tru-single-select-arrow-wrapper > .ant-select > .ant-select-selector');} 
-//getting select industry type 
-get SelectIndustryType(){return cy.get('.ant-select-item-option-content').contains('Administration of Education Programs');}
-// getting Datalock Industry    
-get DatalockIndustry(){return cy.get('[path="applicant.datalock.industryName"] > .tru-form-item > .tru-column > .select-with-filter-container > .tooltip-container > .tru-single-select-arrow-wrapper > .ant-select > .ant-select-selector');}
-//getting select Datalock Industry 
-get SelectDatalockIndustry(){return cy.get('.ant-select-item-option-content').contains('Agriculture');}
-//getting Business Description 
-get BusinessDescription(){return cy.get('textarea[class="tru-textarea"][placeholder="Business Description"]');}
-//getting Adult Content 
-get AdultContent(){return cy.get('[path="coverage.shared.engagedIndustries.adult"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');}
-//getting Cannabis
-get Cannabis(){return cy.get('[path="coverage.shared.engagedIndustries.cannabis"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');}
-//getting care provider
-get CareProvider(){return cy.get('[path="coverage.shared.engagedIndustries.careProvider"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');}
-//getting Cryptocurrency or Blockchain
-get CryptocurrencyOrBlockchain(){return cy.get('[path="coverage.shared.engagedIndustries.cryptoCurrency"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');}
-//getting data Processing
-get DataProcessing(){return cy.get('[path="coverage.shared.engagedIndustries.dataProcessing"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');}
-//getting Debt Collection
-get DebtCollection(){return cy.get('[path="coverage.shared.engagedIndustries.debtCollection"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');}
-//getting Gambling
-get Gambling(){return cy.get('[path="coverage.shared.engagedIndustries.gambling"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');}
-//getting Payment Processing
-get PaymentProcessingn(){return cy.get('[path="coverage.shared.engagedIndustries.paymentProcessing"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');}
-//getting Storage Hosting
-get StorageHosting(){return cy.get('[path="coverage.shared.engagedIndustries.storageHosting"] >.tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch > .slider');} 
-//getting Number Of Employees
-get NumberOfEmployees(){return cy.get('input[type="number"][placeholder="Number Of Employees"]');}
-//getting Number of Non US Employees
-get NumberOfNonUSEmployees(){return cy.get('input[type="number"][placeholder="Number of Non US Employees"]');}
-//getting Annual Revenue for the last complete financial year $
-get AnnualRevenueLastFinancialYear (){return cy.get('input[type="text"][placeholder="Annual Revenue for the last complete financial year $"]');}
-//getting Gross Profit for the last complete financial year $
-get GrossProfitLastFinancialYear (){return cy.get('input[type="text"][placeholder="Gross Profit for the last complete financial year $"]');} 
-//getting Non US Revenue
-get NonUSRevenue(){return cy.get('input[type="radio"][name="applicant.shared.globalRevenue"]').eq(0);}
-//getting Non US Revenue Percentage (%)
-get NonUSRevenueAmount(){return cy.get('input.tru-number-input[placeholder="Non US Revenue Percentage (%)"]');}
-//getting EEA Revenue
-get EEARevenue(){return cy.get('input[type="radio"][name="applicant.datalock.eeaRevenue"]').eq(0);}
-//getting High Risk Territories
-get HighRiskTerritories(){return cy.get('input[type="radio"][name="applicant.datalock.highRiskTerritories"]').eq(1);}
-//getting Include TRIA
-get IncludeTRIA(){return cy.get('input[type="radio"][name="applicant.datalock.includeTria"]').eq(1);} 
-//getting Change in Business Activities
-get ChangeInBusinessActivities(){return cy.get('input[type="radio"][name="applicant.bbr.mergerAcquisition"]').eq(1);} 
-//getting Type of Coverage
-get TypeOfCoverage(){return cy.get('span.ant-select-selection-placeholder').contains('Type of Coverage');}  
-//getting select addmitted Type of Coverage
-get SelectCoverage(){return cy.get('.ant-select-item-option-content').contains("ADMITTED"); }
 
-     // End of sara's section
 } 
 module.exports=new AppFormPage();
 
