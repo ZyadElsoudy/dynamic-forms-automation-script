@@ -5,4 +5,5 @@
   "devDependencies": {
     "cypress-mochawesome-reporter": "^3.8.1"
   }
+ 
 }

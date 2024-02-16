@@ -2,7 +2,7 @@
 import AppFormPage from "../Pages/app-form-page.cy.js";
 //from 89 to 110 
 class AppFormTest{
-Addingclaims(){
+    SubmitAppFormForAllMarkets(){
 
     // Maggies's action  from 9 to 24
 

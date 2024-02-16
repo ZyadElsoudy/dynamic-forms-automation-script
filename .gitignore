@@ -1,2 +1,4 @@
 /cypress/fixtures/Data.json
 /cypress/node_modules
+/cypress/videos
+/cypress/reporters
