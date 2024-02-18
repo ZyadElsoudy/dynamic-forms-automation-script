@@ -178,7 +178,58 @@ get SelectCoverage(){return cy.get('.ant-select-item-option-content').contains("
     // "Manages Critical Patching on a Schedule" field
     get CriticalPatching(){
         return cy.get('input[type="radio"][name="cyberRisk.shared.criticalPatching"]').eq(0);}
-    
+
+                                        //Menna's Actions from 70 to 88
+// getting Remote Network Access -> selection yes
+get RemoteNetworkAccess(){return cy.get('input[type="radio"][name="cyberRisk.shared.remoteNetworkAccess"]').eq(0);};    
+// getting Virtual Private Network (VPN) -> selection No 
+get VPN(){return cy.get('input[type="radio"][ name="cyberRisk.coalition.mfaVPN"]').eq(1);};
+// geeting Administrator and Privileged accounts -> selection No
+get AdministratorAndPrivilegedAccounts(){return cy.get('input[type="radio"][ name="cyberRisk.shared.administratorAndPreviledgedAccounts"]').eq(1);};
+// geeting External Remote Desktop Protocol -> selection No
+get ExternalRemoteDesktopProtocols(){return cy.get('input[type="radio"][ name="cyberRisk.shared.externalRemoteDesktop"]').eq(1);};
+// geeting Independent contractors and vendors accessing the network -> selection No
+get IndependentContractors(){return cy.get('input[type="radio"][ name="cyberRisk.shared.independentVendorsNetworkAccess"]').eq(1);};
+// geeting All email accounts -> selection Yes
+get AllEmailAccounts(){return cy.get('input[type="radio"][ name="cyberRisk.shared.allEmailAccounts"]').eq(0);};
+// geeting Change Password Quarterly -> selection Yes
+get ChangePasswordQuarterly(){return cy.get('input[type="radio"][ name="cyberRisk.datalock.changePasswordQuarterly"]').eq(0);};
+// geeting Strong Passwords -> selection Yes
+get StrongPasswords(){return cy.get('input[type="radio"][ name="cyberRisk.shared.strongPasswords"]').eq(0);};
+// geeting Perform Cyber Security Training -> selection Yes
+get PerformCyberSecurityTraining(){return cy.get('input[type="radio"][ name="cyberRisk.shared.performCyberSecurityTraining"]').eq(0);};
+// geeting EOL or EOS Software still in-use -> selection Yes
+get EOLOrEOSstillInUse(){return cy.get('input[type="radio"][ name="cyberRisk.shared.segregateEndOfLifeSystems"]').eq(0);};
+// geeting EOL or EOS Software is segregated -> selection Yes
+get EOLorEOSSegregated(){return cy.get('input[type="radio"][ name="cyberRisk.shared.networkSegregatedSoftware"]').eq(0);};
+// geeting Biometric Records -> selection Yes
+get BiometricRecords(){return cy.get('input[type="radio"][ name="cyberRisk.shared.biometricRecordsStorage"]').eq(0);};
+// geeting Applicant Is PCI Compliant -> selection Yes
+get PciCompliant(){return cy.get('input[type="radio"][ name="cyberRisk.shared.pciCompliant"]').eq(0);};
+/*// geeting Funds Transfer Dual Control -> with its 3 selection 
+get FundsTransferDualControl(){return cy.get('[path="cyberRisk.shared.secondConfirmationBeforeEft"] > .tru-form-item > .tru-column > .tru-single-select-arrow-wrapper > .ant-select ant-select-single ant-select-show-arrow > .ant-select-arrow')};
+     // selection 1 Yes - all payments
+    get SelectionYesAllPayment(){return cy.get('.ant-select-item-option-content')};
+    // selection 2 Yes - above $5k only
+    get YesAbove$5kOnly(){return cy.get('[id="rc_select_8_list_2"]')};
+    // selection 3 Yes - above $25k only
+    get YesAbove$25kOnly(){return cy.get('[id="rc_select_8_list_3"]')};
+*/
+// geeting Administrative Dual Control -> selection Yes
+get AdministrativeDualControl(){return cy.get('input[type="radio"][ name="cyberRisk.shared.administrativeDualControl"]').eq(0);};
+// geeting Infringement of copyright  -> selection Yes
+get InfringementOfCopyright (){return cy.get('input[type="radio"][ name="coverage.datalock.infringmentOfCopyright"]').eq(0);};
+// geeting Infringement of trademark  -> selection Yes
+get InfringementOfTrademark (){return cy.get('input[type="radio"][ name="coverage.datalock.infringmentOfTradeMark"]').eq(0);};
+// geeting Libel or slander  -> selection Yes
+get LibelOrSlander (){return cy.get('input[type="radio"][ name="coverage.datalock.libelOrSlander"]').eq(0);};
+// geeting Takedown Procedures  -> selection Yes
+get TakedownProcedures (){return cy.get('input[type="radio"][ name="cyberRisk.bbr.takeDownProcedures"]').eq(0);};
+// geeting Formal Review Broadcast  -> selection Yes
+get FormalReviewBroadcast (){return cy.get('input[type="radio"][ name="cyberRisk.bbr.formalReviewBroadcast"]').eq(0);};
+// geeting Formal Review Supervised  -> selection Yes
+get FormalReviewSupervised (){return cy.get('input[type="radio"][ name="cyberRisk.bbr.formalReviewSupervised"]').eq(0);};
+                                        //End of Menna's sction from 70 to 88
 // Emad and Zyad's Section
 //getting Aware of Possible Pending Claims field 
 get AwareOfPossiblePendingClaims(){
