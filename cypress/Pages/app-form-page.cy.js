@@ -118,7 +118,11 @@ get TypeOfCoverage(){return cy.get('span.ant-select-selection-placeholder').cont
 //getting select addmitted Type of Coverage
 get SelectCoverage(){return cy.get('.ant-select-item-option-content').contains("ADMITTED"); }
 
-     // End of sara's section
+    
+// End of sara's section
+get JumpToCyberRiskSection(){
+    return cy.get('button[class="tru-button link "]').contains("Cyber Risk")
+}
      get PersonallyIdentifiableInfo(){
         return cy.get('input[type="radio"][name="cyberRisk.shared.personallyIdentifiableInformation"]').eq(0);}
     get EstimatePersonallyIdentifiableInfo(){
@@ -128,6 +132,10 @@ get SelectCoverage(){return cy.get('.ant-select-item-option-content').contains("
     get MedicalRecords(){
         return cy.get('input[type="radio"][name="cyberRisk.shared.medicalRecords"]').eq(0);}
     
+        //Estimate Medical Records
+        get EstimateMedicalRecords(){
+            return cy.get('input[class="tru-number-input"][placeholder="Estimate"]').eq(1);
+        }
     // "Financial information" field
     get FinancialInformation(){
         return cy.get('input[type="radio"][name="cyberRisk.shared.financialInformation"]').eq(0);}
@@ -290,9 +298,12 @@ get EffectiveDate(){
     cy.get('button[class="tru-button link "]').contains('Coverage').click();
     return cy.get('input[placeholder="DD/MM/YYYY"]');
 }
+get scrollToNextMonth(){
+    return cy.get('span[class="ant-picker-next-icon"]');
+}
 //Selection of date 
 get SelectedeffectiveDate(){
-    return cy.get('div[class="ant-picker-cell-inner"]').contains("20");
+    return cy.get('div[class="ant-picker-cell-inner"]').contains("23");
 }
 //getting Beazly Limit
 get Beazlyalimit(){
@@ -330,7 +341,15 @@ get AddCrimeCoverage(){
 get AddTechnologyErrorsandOmissions(){
     return cy.get('input[type="radio"][name="coverage.everest.technologyErrorsAndOmissions"]').eq(0);
 }
- 
+get GetQuoteButton(){
+    return cy.contains("Get Quote");
+}
+get DataLockLimit(){
+    return cy.get('span[class="ant-select-selection-placeholder"]').contains("Datalock Limit");
+}
+get SelectedDataLockLimit(){
+    return cy.get('.ant-select-item-option-content').contains("$ 100,000");
+}
 
 } 
 module.exports=new AppFormPage();

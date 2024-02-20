@@ -21,5 +21,6 @@ module.exports = defineConfig({
     "browser":"chrome",
     "viewportHeight": 1080,
     "viewportWidth": 1920,
+    //"supportFile":"./cypress/support/e2e.js",
   },
 });
