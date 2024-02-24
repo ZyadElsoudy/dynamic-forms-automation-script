@@ -18,7 +18,9 @@ module.exports = defineConfig({
       require('cypress-mochawesome-reporter/plugin')(on);
     },
     "chromeWebSecurity": false,
+    "browser":"chrome",
     "viewportHeight": 1080,
     "viewportWidth": 1920,
+    //"supportFile":"./cypress/support/e2e.js",
   },
 });
