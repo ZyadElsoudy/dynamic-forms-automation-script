@@ -2,6 +2,24 @@
 class AppFormPage{
     // Maggies part from 9 to 24
     // Getting Applicant name 
+   get jumpToApplicantSection(){
+    return cy.get('button[class="tru-button link "]').contains("Applicant")
+   }
+    get CloseDataLockIcon(){
+        return cy.get('button[id="close-datalock"][class="tru-button default remove-tag"]').eq(0);
+    }
+    get CloseBBR(){
+        return cy.get('button[id="close-bbr"][class="tru-button default remove-tag"]').eq(0);
+    }
+    get CloseCoallition(){
+        return cy.get('button[id=close-coalition][class="tru-button default remove-tag"]').eq(0);
+    }
+    get CloseCFC(){
+        return cy.get('button[id="close-cfc"][class="tru-button default remove-tag"]').eq(0);
+    }
+    get CloseEverest(){
+        return cy.get('button[id="close-everest"][class="tru-button default remove-tag"]').eq(0);
+    }
 get ApplicantName (){return cy.get('input[type="text"][placeholder="Associate Name"]')}
 
     //geeting lockton office 
@@ -349,6 +367,18 @@ get DataLockLimit(){
 }
 get SelectedDataLockLimit(){
     return cy.get('.ant-select-item-option-content').contains("$ 100,000");
+}
+get EveerestLimit(){
+    return  cy.get('span[class="ant-select-selection-placeholder"]').contains("Everest Limit"); 
+}
+get SelectedeverestLimit(){
+    return cy.get('.ant-select-item-option-content').contains("$1,000,000");
+}
+get DatalockRetention(){
+     return cy.get('span[class="ant-select-selection-placeholder"]').contains("Datalock Retention");
+}
+get SelectedDatalockRetention(){
+    return cy.get('.ant-select-item-option-content').contains("$ 25,000");
 }
 
 } 

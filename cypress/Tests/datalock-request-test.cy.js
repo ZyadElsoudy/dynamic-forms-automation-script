@@ -3,10 +3,13 @@ import QuoteScreenpage from "../Pages/quote-screen-page.cy.js";
 let cntr =6;
 class DatalockRequestTest{
     SubmitDatalockRequest(){
-        for (let i = 0; i < 4; i++) {
-            cy.get('button[class="tru-button default remove-tag"]').eq(cntr).click();
-            cntr--;
-    }
+        
+     AppFormPage.jumpToApplicantSection.click();
+     cy.wait(5000)
+     AppFormPage.CloseBBR.click();
+     AppFormPage.CloseCFC.click();
+     AppFormPage.CloseCoallition.click();
+     AppFormPage.CloseEverest.click();
      AppFormPage.LegalCompanyName.type("Company name is confidential");
      AppFormPage.SearchForAddress.type("123 William St, New York, NY 10038, USA{enter}");
      AppFormPage.Website.type("www.google.com");
@@ -21,6 +24,7 @@ class DatalockRequestTest{
      AppFormPage.HighRiskTerritories.click();
      AppFormPage.IncludeTRIA.click();
      AppFormPage.JumpToCyberRiskSection.click();
+     cy.wait(5000);
      AppFormPage.PersonallyIdentifiableInfo.click({force :true});
      AppFormPage.EstimatePersonallyIdentifiableInfo.should('be.visible').type(45);
      AppFormPage.MedicalRecords.click({force:true});
