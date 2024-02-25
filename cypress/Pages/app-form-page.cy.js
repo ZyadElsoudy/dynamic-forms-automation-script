@@ -1,5 +1,20 @@
 //Add Your Code Here
 class AppFormPage{
+    // Remove Datalock market
+get CloseDatalock(){return cy.get('#close-datalock');}
+
+    // Remove BBR market
+get CloseBBR(){return cy.get('#close-bbr');}
+
+    // Remove Coalition market
+get CloseCoalition(){return cy.get('#close-coalition');}
+
+    // Remove CFC market
+get CloseCFC(){return cy.get('#close-cfc');}   
+
+    // Remove Everest market
+get CloseEverest(){return cy.get('#close-everest');}
+
     // Maggies part from 9 to 24
     // Getting Applicant name 
    get jumpToApplicantSection(){
@@ -148,7 +163,7 @@ get JumpToCyberRiskSection(){
         
     // "Medical records" field
     get MedicalRecords(){
-        return cy.get('input[type="radio"][name="cyberRisk.shared.medicalRecords"]').eq(0);}
+        return cy.get('input[type="radio"][name="cyberRisk.shared.medicalRecords"]').eq(1   );}
     
         //Estimate Medical Records
         get EstimateMedicalRecords(){
@@ -264,7 +279,7 @@ get AwareOfPossiblePendingClaims(){
 }
 // getting Recent Incidents/claims Are Closed field
 get RecentIncidentsAndClaimsAreClosed(){
-    return cy.get('input[type="radio"][name="claims.shared.recentIncidentsAreClosed"]').eq(0);
+    return cy.get('input[type="radio"][name="claims.shared.recentIncidentsAreClosed"]').eq(1);
 }
 //getting Number of claims text field 
 get NumOfClaims (){
@@ -321,7 +336,8 @@ get scrollToNextMonth(){
 }
 //Selection of date 
 get SelectedeffectiveDate(){
-    return cy.get('div[class="ant-picker-cell-inner"]').contains("23");
+return cy.get('div[class="ant-picker-cell-inner"]').contains("23");
+
 }
 //getting Beazly Limit
 get Beazlyalimit(){
@@ -359,6 +375,18 @@ get AddCrimeCoverage(){
 get AddTechnologyErrorsandOmissions(){
     return cy.get('input[type="radio"][name="coverage.everest.technologyErrorsAndOmissions"]').eq(0);
 }
+
+
+
+
+    // Quote Declined assertion
+get QuoteDeclined(){return cy.get('.slick-current > :nth-child(1) > .quote-column > .quote-details-wrapper > .quote-header-and-name-wrapper > .status-with-link > .quote-status').should('be.visible').contains('Declined');}
+
+    // Filter 
+    get Filter(){return cy.get('.filter-tags-wrapper > .tru-search-bar > .false')}  
+}
+ 
+
 get GetQuoteButton(){
     return cy.contains("Get Quote");
 }
@@ -381,7 +409,8 @@ get SelectedDatalockRetention(){
     return cy.get('.ant-select-item-option-content').contains("$ 25,000");
 }
 
-} 
+
+
 module.exports=new AppFormPage();
 
 
