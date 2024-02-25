@@ -17,6 +17,24 @@ get CloseEverest(){return cy.get('#close-everest');}
 
     // Maggies part from 9 to 24
     // Getting Applicant name 
+   get jumpToApplicantSection(){
+    return cy.get('button[class="tru-button link "]').contains("Applicant")
+   }
+    get CloseDataLockIcon(){
+        return cy.get('button[id="close-datalock"][class="tru-button default remove-tag"]').eq(0);
+    }
+    get CloseBBR(){
+        return cy.get('button[id="close-bbr"][class="tru-button default remove-tag"]').eq(0);
+    }
+    get CloseCoallition(){
+        return cy.get('button[id=close-coalition][class="tru-button default remove-tag"]').eq(0);
+    }
+    get CloseCFC(){
+        return cy.get('button[id="close-cfc"][class="tru-button default remove-tag"]').eq(0);
+    }
+    get CloseEverest(){
+        return cy.get('button[id="close-everest"][class="tru-button default remove-tag"]').eq(0);
+    }
 get ApplicantName (){return cy.get('input[type="text"][placeholder="Associate Name"]')}
 
     //geeting lockton office 
@@ -133,7 +151,11 @@ get TypeOfCoverage(){return cy.get('span.ant-select-selection-placeholder').cont
 //getting select addmitted Type of Coverage
 get SelectCoverage(){return cy.get('.ant-select-item-option-content').contains("ADMITTED"); }
 
-     // End of sara's section
+    
+// End of sara's section
+get JumpToCyberRiskSection(){
+    return cy.get('button[class="tru-button link "]').contains("Cyber Risk")
+}
      get PersonallyIdentifiableInfo(){
         return cy.get('input[type="radio"][name="cyberRisk.shared.personallyIdentifiableInformation"]').eq(0);}
     get EstimatePersonallyIdentifiableInfo(){
@@ -143,6 +165,10 @@ get SelectCoverage(){return cy.get('.ant-select-item-option-content').contains("
     get MedicalRecords(){
         return cy.get('input[type="radio"][name="cyberRisk.shared.medicalRecords"]').eq(1   );}
     
+        //Estimate Medical Records
+        get EstimateMedicalRecords(){
+            return cy.get('input[class="tru-number-input"][placeholder="Estimate"]').eq(1);
+        }
     // "Financial information" field
     get FinancialInformation(){
         return cy.get('input[type="radio"][name="cyberRisk.shared.financialInformation"]').eq(0);}
@@ -305,9 +331,13 @@ get EffectiveDate(){
     cy.get('button[class="tru-button link "]').contains('Coverage').click();
     return cy.get('input[placeholder="DD/MM/YYYY"]');
 }
+get scrollToNextMonth(){
+    return cy.get('span[class="ant-picker-next-icon"]');
+}
 //Selection of date 
 get SelectedeffectiveDate(){
-    return cy.get('div[class="ant-picker-cell-inner"]').contains("27");
+return cy.get('div[class="ant-picker-cell-inner"]').contains("23");
+
 }
 //getting Beazly Limit
 get Beazlyalimit(){
@@ -345,9 +375,9 @@ get AddCrimeCoverage(){
 get AddTechnologyErrorsandOmissions(){
     return cy.get('input[type="radio"][name="coverage.everest.technologyErrorsAndOmissions"]').eq(0);
 }
-get GetQuote(){
-    return cy.get('button[class="tru-button primary undefined "]').contains('Get Quote');
-}
+
+
+
 
     // Quote Declined assertion
 get QuoteDeclined(){return cy.get('.slick-current > :nth-child(1) > .quote-column > .quote-details-wrapper > .quote-header-and-name-wrapper > .status-with-link > .quote-status').should('be.visible').contains('Declined');}
@@ -356,6 +386,29 @@ get QuoteDeclined(){return cy.get('.slick-current > :nth-child(1) > .quote-colum
     get Filter(){return cy.get('.filter-tags-wrapper > .tru-search-bar > .false')}  
 }
  
+
+get GetQuoteButton(){
+    return cy.contains("Get Quote");
+}
+get DataLockLimit(){
+    return cy.get('span[class="ant-select-selection-placeholder"]').contains("Datalock Limit");
+}
+get SelectedDataLockLimit(){
+    return cy.get('.ant-select-item-option-content').contains("$ 100,000");
+}
+get EveerestLimit(){
+    return  cy.get('span[class="ant-select-selection-placeholder"]').contains("Everest Limit"); 
+}
+get SelectedeverestLimit(){
+    return cy.get('.ant-select-item-option-content').contains("$1,000,000");
+}
+get DatalockRetention(){
+     return cy.get('span[class="ant-select-selection-placeholder"]').contains("Datalock Retention");
+}
+get SelectedDatalockRetention(){
+    return cy.get('.ant-select-item-option-content').contains("$ 25,000");
+}
+
 
 
 module.exports=new AppFormPage();

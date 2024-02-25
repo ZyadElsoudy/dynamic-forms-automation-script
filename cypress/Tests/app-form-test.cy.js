@@ -126,6 +126,7 @@ AppFormPage.PersonallyIdentifiableInfo.click({force :true});
         //cy.wait(5000);
         AppFormPage.EstimatePersonallyIdentifiableInfo.type(45);
         AppFormPage.MedicalRecords.click({force:true});
+        AppFormPage.EstimateMedicalRecords.type(100);
         AppFormPage.FinancialInformation.click();
         AppFormPage.EstimateFinancialInformation.type(25);
          AppFormPage.DriverLicenseNumber.click({force:true});
@@ -238,6 +239,7 @@ AppFormPage.PersonallyIdentifiableInfo.click({force :true});
     // AppFormPage.AddCrimeCoverage.click();
     //cy.wait(5000);
     AppFormPage.AddTechnologyErrorsandOmissions.click();
+    AppFormPage.GetQuoteButton.click();
 
 }
     
