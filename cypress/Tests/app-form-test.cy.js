@@ -224,7 +224,7 @@ AppFormPage.PersonallyIdentifiableInfo.click({force :true});
     AppFormPage.SelectedBeazlylimit.click();
     //cy.wait(5000);
     AppFormPage.BeazlyaRetention.click({force:true});
-    //cy.wait(5000);
+    //cy.wait(5000);    
     AppFormPage.SelectedBeazlyRetention.click();
     //cy.wait(5000);
     AppFormPage.Coalition_Limit_List.click({force:true});
