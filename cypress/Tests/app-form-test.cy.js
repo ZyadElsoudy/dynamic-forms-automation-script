@@ -2,7 +2,7 @@
 import AppFormPage from "../Pages/app-form-page.cy.js";
 //from 89 to 110 
 class AppFormTest{
-Addingclaims(){
+    SubmitAppFormForAllMarkets(){
 
     // Maggies's action  from 9 to 24
 
@@ -65,16 +65,16 @@ Addingclaims(){
 **/
 
     // Type a value in Website field
-    AppFormPage.Website.type("www.google.com");
-    cy.wait(10000);
+       AppFormPage.Website.type("www.google.com");
+       cy.wait(10000);
 
     // Enable Use Client data toggle
-    AppFormPage.UseClientDataToggle.click();
+       AppFormPage.UseClientDataToggle.click();
 
 
 
     //Sara's Actions from  25 to 49
-    AppFormPage.ScrollToCity.scrollIntoView();
+       AppFormPage.ScrollToCity.scrollIntoView();
        cy.wait(5000);
        AppFormPage.BusinessType.click({force:true});
        AppFormPage.SelectBusinessType.click();
@@ -121,6 +121,75 @@ Addingclaims(){
        AppFormPage.TypeOfCoverage.click({force:true});
        cy.wait(5000);
        AppFormPage.SelectCoverage.click();
+
+
+
+// Morine's Actions  
+        AppFormPage.PersonallyIdentifiableInfo.click({force :true});
+        AppFormPage.EstimatePersonallyIdentifiableInfo.type(45);
+        AppFormPage.MedicalRecords.click({force:true});
+        AppFormPage.FinancialInformation.click();
+        AppFormPage.EstimateFinancialInformation.type(25);
+        AppFormPage.DriverLicenseNumber.click({force:true});
+        AppFormPage.EstimateDriverLicense.type(10);
+        AppFormPage.SocialSecurity.click();
+        AppFormPage.PCIinformation.click();
+        AppFormPage.PerformsRegularBackups.click();
+        AppFormPage.ProtectBackups.click();
+        AppFormPage.EmailFiltering.click();
+        AppFormPage.AccessWebBasedEmail.click();
+        AppFormPage.AntiVirus.click();
+        AppFormPage.Encryption.click();
+        AppFormPage.DownloadedToPortableDevices.click();
+        AppFormPage.CriticalPatching.click();
+        
+        
+    //Menna's Aections from 70 to 88
+    // Select Remote Network Access
+    AppFormPage.RemoteNetworkAccess.click();
+    // Select Virtual Private Network (VPN) (Yes)
+    AppFormPage.VPN.click();
+    // Select Administrator and Privileged accounts -> selection No
+    AppFormPage.AdministratorAndPrivilegedAccounts.click();
+    // Select External Remote Desktop Protocol -> selection No
+    AppFormPage.ExternalRemoteDesktopProtocols.click();
+    // Select Independent contractors and vendors accessing the network -> selection No
+    AppFormPage.IndependentContractors.click();
+    // Select All email accounts -> selection Yes
+    AppFormPage.AllEmailAccounts.click();
+    // Select Change Password Quarterly -> selection Yes
+    AppFormPage.ChangePasswordQuarterly.click();
+    // Select Strong Passwords -> selection Yes
+    AppFormPage.StrongPasswords.click();
+    // Select Perform Cyber Security Training -> selection Yes
+    AppFormPage.PerformCyberSecurityTraining.click();
+    // Select EOL or EOS Software still in-use -> selection Yes
+    AppFormPage.EOLOrEOSstillInUse.click();
+    // Select EOL or EOS Software is segregated -> selection Yes
+    AppFormPage.EOLorEOSSegregated.click();
+    // Select Biometric Records -> selection Yes
+    AppFormPage.BiometricRecords.click();
+    // Select Applicant Is PCI Compliant -> selection Yes
+    AppFormPage.PciCompliant.click();
+    /*// Select Funds Transfer Dual Control -> with its first selection 
+    AppFormPage.FundsTransferDualControl.click();
+        AppFormPage.SelectionYesAllPayment.click();
+    */
+   // Select Administrative Dual Control -> selection Yes
+   AppFormPage.AdministrativeDualControl.click();
+   // Select Infringement of copyright  -> selection Yes
+   AppFormPage.InfringementOfCopyright.click();
+   // Select Infringement of trademark  -> selection Yes
+   AppFormPage.InfringementOfTrademark.click();
+   // Select Libel or slander  -> selection Yes
+   AppFormPage.LibelOrSlander.click();
+   // Select Takedown Procedures  -> selection Yes
+   AppFormPage.TakedownProcedures.click();
+   // Select Formal Review Broadcast  -> selection Yes
+   AppFormPage.FormalReviewBroadcast.click();
+   // Select Formal Review Supervised  -> selection Yes
+   AppFormPage.FormalReviewSupervised.click();
+   //End of Menna's Aection from 70 to 88
 
     //Emad and Zyad added Actions from 89 to 123
     AppFormPage.AwareOfPossiblePendingClaims.click();
@@ -175,6 +244,7 @@ Addingclaims(){
 }
     
 }
+
 module.exports=new AppFormTest()
 
 
