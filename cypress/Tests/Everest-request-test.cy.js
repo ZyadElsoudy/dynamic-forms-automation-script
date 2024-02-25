@@ -40,9 +40,11 @@ class EverestRequestTest{
             AppFormPage.AwareOfPossiblePendingClaims.click({force:true});
             AppFormPage.RecentIncidentsAndClaimsAreClosed.click({force:true});
             AppFormPage.EffectiveDate.click({force:true});
+            AppFormPage.scrollToNextMonth.click();
+
             AppFormPage.SelectedeffectiveDate.click({force:true});
             AppFormPage.AddTechnologyErrorsandOmissions.click({force:true});
-            AppFormPage.GetQuote.click();
+            AppFormPage.GetQuoteButton.click();
 
             
 

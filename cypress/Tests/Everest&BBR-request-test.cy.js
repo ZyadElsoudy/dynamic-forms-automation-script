@@ -59,7 +59,7 @@ class EverestAndBbrRequestTest{
             AppFormPage.BeazlyaRetention.click({force:true});   
             AppFormPage.SelectedBeazlyRetention.click();
             AppFormPage.AddTechnologyErrorsandOmissions.click({force:true});
-            AppFormPage.GetQuote.click();
+            AppFormPage.GetQuoteButton.click();
 
             
 
