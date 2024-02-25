@@ -14,7 +14,7 @@ get SelectLocktonOffice(){return cy.get('.ant-select-item-option-content').conta
 get LegalCompanyName (){ return  cy.get('input[type="text"][placeholder="Legal Company name"]');}
 
     //selecting Trading name
-get TradingName (){ return cy.get('input[type="text"][placeholder="Legal Company name"]');}
+get TradingName (){ return cy.get('input[type="text"][placeholder="Trading Name (if different)"]');}
 
     //Selecting TradeType
 get TradeType(){return cy.get('[path="applicant.everest.tradeType"] > .tru-form-item');}
@@ -206,10 +206,12 @@ get EOLorEOSSegregated(){return cy.get('input[type="radio"][ name="cyberRisk.sha
 get BiometricRecords(){return cy.get('input[type="radio"][ name="cyberRisk.shared.biometricRecordsStorage"]').eq(0);};
 // geeting Applicant Is PCI Compliant -> selection Yes
 get PciCompliant(){return cy.get('input[type="radio"][ name="cyberRisk.shared.pciCompliant"]').eq(0);};
-/*// geeting Funds Transfer Dual Control -> with its 3 selection 
+// geeting Funds Transfer Dual Control -> with its 3 selection 
 get FundsTransferDualControl(){return cy.get('[path="cyberRisk.shared.secondConfirmationBeforeEft"] > .tru-form-item > .tru-column > .tru-single-select-arrow-wrapper > .ant-select ant-select-single ant-select-show-arrow > .ant-select-arrow')};
      // selection 1 Yes - all payments
     get SelectionYesAllPayment(){return cy.get('.ant-select-item-option-content')};
+    
+    /*
     // selection 2 Yes - above $5k only
     get YesAbove$5kOnly(){return cy.get('[id="rc_select_8_list_2"]')};
     // selection 3 Yes - above $25k only
@@ -292,7 +294,7 @@ get EffectiveDate(){
 }
 //Selection of date 
 get SelectedeffectiveDate(){
-    return cy.get('div[class="ant-picker-cell-inner"]').contains("20");
+    return cy.get('div[class="ant-picker-cell-inner"]').contains("27");
 }
 //getting Beazly Limit
 get Beazlyalimit(){
@@ -331,7 +333,36 @@ get AddTechnologyErrorsandOmissions(){
     return cy.get('input[type="radio"][name="coverage.everest.technologyErrorsAndOmissions"]').eq(0);
 }
  
+//removing bbr 
+get RemoveBBR (){
+return cy.get('#close-bbr');
+}
+ 
+//remove cfc
+get RemoveCFC (){
+    return cy.get ( '#close-cfc');
+}
+//remove datalock
+get RemoveDatalock (){
+    return cy.get ( '#close-datalock');
+}
+//remove Coalition
+get RemoveCoalition (){
+    return cy.get ( '#close-coalition');
+}
+//remove everest
+get RemoveEverest (){
+    return cy.get ( '#close-everest');
+}
+get GetQuoteButton (){
 
+    return cy.get(".tru-button").contains("Get Quote");
+}
+//displayed error schema 
+get ErrorSchema (){
+
+    return cy.get('input[class="false"][value="[error]"]');
+}
 } 
 module.exports=new AppFormPage();
 

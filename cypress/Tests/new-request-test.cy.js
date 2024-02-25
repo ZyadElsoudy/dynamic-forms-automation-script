@@ -7,6 +7,8 @@ class NewRequestTest{
         NewRequestPage.selectNewReq.click();
         NewRequestPage.SelectNewRequest.click();
         NewRequestPage.SelectNewRequest.type('us');
+        cy.wait(10000);
+
         NewRequestPage.RequestOption.click();
         NewRequestPage.SelectClient.click();
         NewRequestPage.SelectClient.type('zooz');
