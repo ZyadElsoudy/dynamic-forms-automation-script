@@ -384,30 +384,31 @@ get QuoteDeclined(){return cy.get('.slick-current > :nth-child(1) > .quote-colum
 
     // Filter 
     get Filter(){return cy.get('.filter-tags-wrapper > .tru-search-bar > .false')}  
+    get GetQuoteButton(){
+        return cy.contains("Get Quote");
+    }
+    get DataLockLimit(){
+        return cy.get('span[class="ant-select-selection-placeholder"]').contains("Datalock Limit");
+    }
+    get SelectedDataLockLimit(){
+        return cy.get('.ant-select-item-option-content').contains("$ 100,000");
+    }
+    get EveerestLimit(){
+        return  cy.get('span[class="ant-select-selection-placeholder"]').contains("Everest Limit"); 
+    }
+    get SelectedeverestLimit(){
+        return cy.get('.ant-select-item-option-content').contains("$1,000,000");
+    }
+    get DatalockRetention(){
+         return cy.get('span[class="ant-select-selection-placeholder"]').contains("Datalock Retention");
+    }
+    get SelectedDatalockRetention(){
+        return cy.get('.ant-select-item-option-content').contains("$ 25,000");
+    }
 }
  
 
-get GetQuoteButton(){
-    return cy.contains("Get Quote");
-}
-get DataLockLimit(){
-    return cy.get('span[class="ant-select-selection-placeholder"]').contains("Datalock Limit");
-}
-get SelectedDataLockLimit(){
-    return cy.get('.ant-select-item-option-content').contains("$ 100,000");
-}
-get EveerestLimit(){
-    return  cy.get('span[class="ant-select-selection-placeholder"]').contains("Everest Limit"); 
-}
-get SelectedeverestLimit(){
-    return cy.get('.ant-select-item-option-content').contains("$1,000,000");
-}
-get DatalockRetention(){
-     return cy.get('span[class="ant-select-selection-placeholder"]').contains("Datalock Retention");
-}
-get SelectedDatalockRetention(){
-    return cy.get('.ant-select-item-option-content').contains("$ 25,000");
-}
+
 
 
 

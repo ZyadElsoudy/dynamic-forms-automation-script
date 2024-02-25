@@ -37,12 +37,13 @@ class CoalitionRequestTest{
        AppFormPage.PciCompliant.click();
        AppFormPage.AdministrativeDualControl.click();
        AppFormPage.EffectiveDate.click();
+       AppFormPage.scrollToNextMonth.click();
        AppFormPage.SelectedeffectiveDate.click();
        AppFormPage.Coalition_Limit_List.click({force:true});
        AppFormPage.Select_CoalitionLimit.click({force:true});
        AppFormPage.Coalition_Retention_List.click({force:true});
        AppFormPage.Select_CoalitionRetention.click({force:true});
-       AppFormPage.GetQuote.click();
+       AppFormPage.GetQuoteButton.click();
        AppFormPage.QuoteDeclined;
     }
 }
