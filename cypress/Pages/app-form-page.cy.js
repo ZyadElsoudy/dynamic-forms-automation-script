@@ -280,9 +280,39 @@ get AddTechnologyErrorsandOmissions(){
     return cy.get('input[type="radio"][name="coverage.everest.technologyErrorsAndOmissions"]').eq(0);
 }
  
+get GetAquoteButton(){
+    return cy.get(".tru-button").contains("Get Quote");
+}
+
+//Removing markets from market area
+
+get RemoveCoalition(){
+    return cy.get('#close-coalition');
+}
+
+
+get RemoveEverest(){
+    return cy.get('#close-everest');
+}
+
+    
+get RemoveBBR(){
+    return cy.get('#close-bbr');
+}
+
+get RemoveDatalock(){
+    return cy.get('#close-datalock');
+}
+
+get RemoveCFC(){
+    return cy.get('#close-cfc');
+}
 
 } 
-module.exports=new AppFormPage();
+
+
+
+module.exports = new AppFormPage();
 
 
 
