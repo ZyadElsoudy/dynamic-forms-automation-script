@@ -6,6 +6,6 @@ class QuoteScreenPage{
    get CoalitionLogs (){return cy.get ('div[class="react-tabs"]').contains("Coalition");}
    get CFCLogs (){return cy.get ('div[class="react-tabs"]').contains("CFC");}
    get EverestLogs (){return cy.get ('div[class="react-tabs"]').contains("Everest");}
-
+   get StatusOfmarket(){return cy.get('span[class="quote-status error"]').contains('Clearance Failed');}
  }
  module.exports=new QuoteScreenPage();

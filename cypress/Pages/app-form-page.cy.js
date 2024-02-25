@@ -363,6 +363,12 @@ get ErrorSchema (){
 
     return cy.get('input[class="false"][value="[error]"]');
 }
+//navigate to applicant
+get NavigateApplicantSection(){
+    cy.get('button[class="tru-button link "]').contains('Applicant');
+}
+
+
 } 
 module.exports=new AppFormPage();
 

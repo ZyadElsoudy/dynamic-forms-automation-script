@@ -14,13 +14,10 @@ class datalockAndCoalition{
         //cy.wait(10000);
            AppFormPage.UseClientDataToggle.click();
            AppFormPage.ScrollToCity.scrollIntoView();
-           cy.wait(5000);
            AppFormPage.IndustryType.click();
            cy.wait(5000);
            AppFormPage.SelectIndustryType.click();
-           //cy.wait(5000);
            AppFormPage.DatalockIndustry.click();
-           //cy.wait(5000);
            AppFormPage.SelectDatalockIndustry.click();
            //cy.wait(5000);
            AppFormPage.BusinessDescription.type('business');
@@ -104,30 +101,20 @@ class datalockAndCoalition{
         AppFormPage.AwareOfPossiblePendingClaims.click();
         //cy.wait(5000);
         AppFormPage.RecentIncidentsAndClaimsAreClosed.click();
-        //cy.wait(5000);
         AppFormPage.NumOfClaims.type('5');
-        //cy.wait(5000);
         AppFormPage.ExceedingLimit.scrollIntoView();
         cy.wait(5000);
         AppFormPage.ExceedingLimit.click();
         AppFormPage.DescribtionOfRecentClaims.type('Description');
         AppFormPage.AmountOfClaims.type('1000');
         cy.wait(5000);
-        //cy.wait(5000);
         AppFormPage.EffectiveDate.click();
-        //cy.wait(5000);
         AppFormPage.SelectedeffectiveDate.click();
-        //cy.wait(5000);
         AppFormPage.Coalition_Limit_List.click({force:true});
-        //cy.wait(5000);
         AppFormPage.Select_CoalitionLimit.click({force:true});
-        //cy.wait(5000);
         AppFormPage.Coalition_Retention_List.click({force:true});
-        //cy.wait(5000);
         AppFormPage.Select_CoalitionRetention.click({force:true});
-        // //cy.wait(5000);
-        //cy.wait(5000);
-       AppFormPage.GetQuoteButton.click();
+        AppFormPage.GetQuoteButton.click();
     }
 }
 module.exports=new datalockAndCoalition();
