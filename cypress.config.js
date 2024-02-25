@@ -2,7 +2,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   video: true,
-  videoCompression: 32,
+  //videoCompression: 32,
   reporter: 'cypress-mochawesome-reporter', //for HTML Report
   reporterOptions: {
     reportDir: 'cypress/reporters', //setting the direction
@@ -21,5 +21,6 @@ module.exports = defineConfig({
     "browser":"chrome",
     "viewportHeight": 1080,
     "viewportWidth": 1920,
+    //"supportFile":"./cypress/support/e2e.js",
   },
 });
