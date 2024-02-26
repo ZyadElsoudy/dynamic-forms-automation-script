@@ -3,7 +3,9 @@ import AppFormPage from "../Pages/app-form-page.cy";
 
 class EverestAndBbrRequestTest{
     SubmitEverestAndBbrRequest(){
-            AppFormPage.CloseDatalock.click();
+        AppFormPage.jumpToApplicantSection();
+        cy.wait(5000);
+            AppFormPage.CloseDataLock.click();
             AppFormPage.CloseCoalition.click();
             AppFormPage.CloseCFC.click();
             // Filter

@@ -2,7 +2,10 @@ import AppFormPage from "../Pages/app-form-page.cy";
 
 class CoalitionRequestTest{
     SubmitCoalitionRequest(){
-        AppFormPage.CloseDatalock.click();
+        AppFormPage.jumpToApplicantSection.click();
+        cy.wait(5000);
+
+        AppFormPage.CloseDataLock.click();
         AppFormPage.CloseBBR.click();
         AppFormPage.CloseCFC.click();
         AppFormPage.CloseEverest.click();
@@ -21,7 +24,8 @@ class CoalitionRequestTest{
         AppFormPage.PersonallyIdentifiableInfo.click();
         AppFormPage.EstimatePersonallyIdentifiableInfo.type(45);
         AppFormPage.MedicalRecords.click({force:true});
-        AppFormPage.FinancialInformation.click();
+        AppFormPage.EstimateMedicalRecords.type(45);
+        AppFormPage.FinancialInformation.click({force:true});
         AppFormPage.EstimateFinancialInformation.type(25);
         AppFormPage.DriverLicenseNumber.click({force:true});
         AppFormPage.EstimateDriverLicense.type(10);

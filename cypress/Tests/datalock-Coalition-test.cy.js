@@ -1,21 +1,24 @@
 import AppFormPage from "../Pages/app-form-page.cy.js";
 class datalockAndCoalition{
     SubmitDatalockAndCoalition(){
-        AppFormPage.RemoveBBR.click();
-        AppFormPage.RemoveCFC.click();
-        AppFormPage.RemoveEverest.click();  
+        AppFormPage.jumpToApplicantSection.click()
+        cy.wait(5000);
+        AppFormPage.CloseBBR.click();
+        AppFormPage.CloseCFC.click();
+        AppFormPage.CloseEverest.click();  
         AppFormPage.ApplicantName.click().type("Maggie rafat");
     
         //Type a value in  Legal company name
         AppFormPage.LegalCompanyName.type("Company name is confidential");
+        AppFormPage.SearchForAddress.type("123 William St, New York, NY 10038, USA{enter}");
         //cy.wait(10000);
         // Type a value in Website field
         AppFormPage.Website.type("www.google.com");
         //cy.wait(10000);
-           AppFormPage.UseClientDataToggle.click();
+           AppFormPage.UseClientDataToggle.click({force:true});
            AppFormPage.ScrollToCity.scrollIntoView();
-           AppFormPage.IndustryType.click();
-           cy.wait(5000);
+           AppFormPage.IndustryType.click({force:true});
+          // cy.wait(5000);
            AppFormPage.SelectIndustryType.click();
            AppFormPage.DatalockIndustry.click();
            AppFormPage.SelectDatalockIndustry.click();
@@ -42,11 +45,12 @@ class datalockAndCoalition{
            AppFormPage.TypeOfCoverage.click({force:true});
            //cy.wait(5000);
            AppFormPage.SelectCoverage.click();
-    // Morine's Actions  
+            AppFormPage.JumpToCyberRiskSection.click();
             AppFormPage.PersonallyIdentifiableInfo.click({force :true});
             AppFormPage.EstimatePersonallyIdentifiableInfo.type(45);
             AppFormPage.MedicalRecords.click({force:true});
-            AppFormPage.FinancialInformation.click();
+            AppFormPage.EstimateMedicalRecords.type(45);
+            AppFormPage.FinancialInformation.click({force:true});
             AppFormPage.EstimateFinancialInformation.type(25);
             AppFormPage.DriverLicenseNumber.click({force:true});
             AppFormPage.EstimateDriverLicense.type(10);
@@ -103,17 +107,20 @@ class datalockAndCoalition{
         AppFormPage.RecentIncidentsAndClaimsAreClosed.click();
         AppFormPage.NumOfClaims.type('5');
         AppFormPage.ExceedingLimit.scrollIntoView();
-        cy.wait(5000);
+        //cy.wait(5000);
         AppFormPage.ExceedingLimit.click();
         AppFormPage.DescribtionOfRecentClaims.type('Description');
         AppFormPage.AmountOfClaims.type('1000');
-        cy.wait(5000);
+        //cy.wait(5000);
         AppFormPage.EffectiveDate.click();
+        AppFormPage.scrollToNextMonth.click();
         AppFormPage.SelectedeffectiveDate.click();
         AppFormPage.Coalition_Limit_List.click({force:true});
         AppFormPage.Select_CoalitionLimit.click({force:true});
         AppFormPage.Coalition_Retention_List.click({force:true});
         AppFormPage.Select_CoalitionRetention.click({force:true});
+        AppFormPage.DataLockLimit.click({force:true});
+        AppFormPage.SelectedDataLockLimit.click();
         AppFormPage.GetQuoteButton.click();
     }
 }

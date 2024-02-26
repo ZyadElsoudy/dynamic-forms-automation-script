@@ -2,10 +2,12 @@ import AppFormPage from "../Pages/app-form-page.cy.js";
 import QuoteScreenPage from "../Pages/quote-screen-page.cy.js";
 class DeclinedBBRRequest{
     SubmitBBRDecRequest(){
-           AppFormPage.RemoveDatalock.click();
-           AppFormPage.RemoveCoalition.click();
-           AppFormPage.RemoveCFC.click();
-           AppFormPage.RemoveEverest.click();      
+           AppFormPage.jumpToApplicantSection.click();
+           cy.wait(5000);
+        AppFormPage.CloseDataLock.click();
+           AppFormPage.CloseCoallition.click();
+           AppFormPage.CloseCFC.click();
+           AppFormPage.CloseEverest.click();      
            AppFormPage.LegalCompanyName.type("Company name is confidential");
            AppFormPage.SearchForAddress.type("123 William St, New York, NY 10038, USA{enter}");
            AppFormPage.Website.type("www.google.com");
@@ -48,13 +50,14 @@ class DeclinedBBRRequest{
            AppFormPage.AwareOfPossiblePendingClaims.click();
            AppFormPage.BbrAdditionalClaim.click();
            AppFormPage.EffectiveDate.click();
+           AppFormPage.scrollToNextMonth.click();
            AppFormPage.SelectedeffectiveDate.click();
            AppFormPage.Beazlyalimit.click({force:true});
            AppFormPage.SelectedBeazlylimit.click();
            AppFormPage.BeazlyaRetention.click({force:true});
            AppFormPage.SelectedBeazlyRetention.click();
            AppFormPage.GetQuoteButton.click();
-           QuoteScreenPage.StatusOfmarket.should('be.visible');
+           QuoteScreenPage.StatusOfmarketClearance.should('be.visible');
 
 
     }

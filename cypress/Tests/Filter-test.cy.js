@@ -6,7 +6,7 @@ class FilterTest{
          AppFormPage.ApplicantName.should('be.visible');
          AppFormPage.LegalCompanyName.should('be.visible');
          AppFormPage.TradingName.should('be.visible');
-         AppFormPage.AnnualRevenueLastFinancialYear.should('not.be.visible');
+         AppFormPage.AnnualRevenueLastFinancialYear.should('not.exist');
     }
 }
 

@@ -1,5 +1,5 @@
 
-class QuoteScreenpage{
+class QuoteScreenPage{
    get AllLogs () {return cy.get ('span[class="title"]').contains('Log');}
    get DatalockLogs (){return cy.get ('div[class="react-tabs"]').contains("Datalock");}
    get BBRLogs (){return cy.get ('div[class="react-tabs"]').contains("BBR");}

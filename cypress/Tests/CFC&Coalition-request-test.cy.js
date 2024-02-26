@@ -3,6 +3,7 @@ import AppFormPage from "../Pages/app-form-page.cy";
 
 class CFCandCoalitionRequestTest{
     SubmitCFCandCoalitionRequest(){
+        AppFormPage.jumpToApplicantSection.click();
         AppFormPage.CloseDatalock.click();
         AppFormPage.CloseBBR.click();
         AppFormPage.CloseEverest.click();
@@ -21,7 +22,8 @@ class CFCandCoalitionRequestTest{
        AppFormPage.PersonallyIdentifiableInfo.click();
        AppFormPage.EstimatePersonallyIdentifiableInfo.type(45);
        AppFormPage.MedicalRecords.click({force:true});
-       AppFormPage.FinancialInformation.click();
+       AppFormPage.EstimateMedicalRecords.type(50);
+       AppFormPage.FinancialInformation.click({force:true});
        AppFormPage.EstimateFinancialInformation.type(25);
        AppFormPage.DriverLicenseNumber.click({force:true});
        AppFormPage.EstimateDriverLicense.type(10);

@@ -1,26 +1,11 @@
 //Add Your Code Here
 class AppFormPage{
     // Remove Datalock market
-get CloseDatalock(){return cy.get('#close-datalock');}
-
-    // Remove BBR market
-get CloseBBR(){return cy.get('#close-bbr');}
-
-    // Remove Coalition market
-get CloseCoalition(){return cy.get('#close-coalition');}
-
-    // Remove CFC market
-get CloseCFC(){return cy.get('#close-cfc');}   
-
-    // Remove Everest market
-get CloseEverest(){return cy.get('#close-everest');}
-
-    // Maggies part from 9 to 24
-    // Getting Applicant name 
+g
    get jumpToApplicantSection(){
     return cy.get('button[class="tru-button link "]').contains("Applicant")
    }
-    get CloseDataLockIcon(){
+    get CloseDataLock(){
         return cy.get('button[id="close-datalock"][class="tru-button default remove-tag"]').eq(0);
     }
     get CloseBBR(){
@@ -163,7 +148,7 @@ get JumpToCyberRiskSection(){
         
     // "Medical records" field
     get MedicalRecords(){
-        return cy.get('input[type="radio"][name="cyberRisk.shared.medicalRecords"]').eq(1   );}
+        return cy.get('input[type="radio"][name="cyberRisk.shared.medicalRecords"]').eq(0);}
     
         //Estimate Medical Records
         get EstimateMedicalRecords(){
@@ -281,7 +266,7 @@ get AwareOfPossiblePendingClaims(){
 }
 // getting Recent Incidents/claims Are Closed field
 get RecentIncidentsAndClaimsAreClosed(){
-    return cy.get('input[type="radio"][name="claims.shared.recentIncidentsAreClosed"]').eq(1);
+    return cy.get('input[type="radio"][name="claims.shared.recentIncidentsAreClosed"]').eq(0);
 }
 //getting Number of claims text field 
 get NumOfClaims (){
@@ -408,34 +393,7 @@ get QuoteDeclined(){return cy.get('.slick-current > :nth-child(1) > .quote-colum
     get SelectedDatalockRetention(){
         return cy.get('.ant-select-item-option-content').contains("$ 25,000");
     }
-}
- 
-//removing bbr 
-get RemoveBBR (){
-return cy.get('#close-bbr');
-}
- 
-//remove cfc
-get RemoveCFC (){
-    return cy.get ( '#close-cfc');
-}
-//remove datalock
-get RemoveDatalock (){
-    return cy.get ( '#close-datalock');
-}
-//remove Coalition
-get RemoveCoalition (){
-    return cy.get ( '#close-coalition');
-}
-//remove everest
-get RemoveEverest (){
-    return cy.get ( '#close-everest');
-}
-get GetQuoteButton (){
-
-    return cy.get(".tru-button").contains("Get Quote");
-}
-//displayed error schema 
+    //displayed error schema 
 get ErrorSchema (){
 
     return cy.get('input[class="false"][value="[error]"]');
@@ -445,11 +403,7 @@ get NavigateApplicantSection(){
     cy.get('button[class="tru-button link "]').contains('Applicant');
 }
 
-
-
-
-
-
+}
 module.exports=new AppFormPage();
 
 
