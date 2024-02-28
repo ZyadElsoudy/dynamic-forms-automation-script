@@ -1,13 +1,15 @@
-//Add Your Code Here
 class AppFormPage{
-    // Maggies part from 9 to 24
     // Getting Applicant name 
-   get jumpToApplicantSection(){
+   get jumpToApplicantSection()
+   {
     return cy.get('button[class="tru-button link "]').contains("Applicant")
    }
-    get CloseDataLockIcon(){
+
+    get CloseDataLockIcon()
+    {
         return cy.get('button[id="close-datalock"][class="tru-button default remove-tag"]').eq(0);
     }
+
     get CloseBBR(){
         return cy.get('button[id="close-bbr"][class="tru-button default remove-tag"]').eq(0);
     }
@@ -26,7 +28,10 @@ get ApplicantName (){return cy.get('input[type="text"][placeholder="Associate Na
 get LocktonOffice(){return cy.get('span.ant-select-selection-placeholder').contains('Lockton Office');}
 
     //Selecting a lockton office from the drop down
-get SelectLocktonOffice(){return cy.get('.ant-select-item-option-content').contains('Los Angeles');}
+get SelectLocktonOffice()
+{
+    return cy.get('.ant-select-item-option-content').contains('Los Angeles');
+}
 
     //Selecting Legal company name
 get LegalCompanyName (){ return  cy.get('input[type="text"][placeholder="Legal Company name"]');}
@@ -73,7 +78,11 @@ get Website(){ return cy.get('input[type="text"][placeholder="Website"]');}
 
     // Select Use Client data toggle
 get UseClientDataToggle(){return cy.get('[path="applicant.shared.sameAsClient"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch');}
-  
+get CliantContactName(){ return cy.get('input[placeholder="Client Contact Name"]');}
+get CliantEmailAdress(){ return cy.get('input[placeholder="Client Email Address]');}
+get CliantContactName(){ return cy.get('input[placeholder="Client Contact Name"]');}
+
+
 
 
 // Sara's Section
@@ -170,9 +179,16 @@ get JumpToCyberRiskSection(){
     get SocialSecurity(){
         return cy.get('input[type="radio"][name="cyberRisk.shared.socialSecurity"]').eq(1);}
     
+    // "Social Security Estimation /National Insurance numbers" field
+    get EstimateSocialSecurity(){
+        return cy.get('[path="cyberRisk.shared.numberOfSocialSecurity"]');}
     // "PCI information" field
     get PCIinformation(){
         return cy.get('input[type="radio"][name="cyberRisk.shared.PCIInformation"]').eq(1);}
+
+    get EstimatePCIinformation(){
+        return cy.get('[path="cyberRisk.shared.numberOfPCIInformation"]');   
+    }
     
     //  "Performs Regular Backups" field
     get PerformsRegularBackups(){
@@ -321,7 +337,7 @@ get scrollToNextMonth(){
 }
 //Selection of date 
 get SelectedeffectiveDate(){
-    return cy.get('div[class="ant-picker-cell-inner"]').contains("23");
+    return cy.get('div[class="ant-picker-cell-inner"]').eq(32);//contains("29");
 }
 //getting Beazly Limit
 get Beazlyalimit(){
@@ -353,7 +369,7 @@ get Select_CoalitionRetention(){
     return cy.get('div[class="ant-select-item ant-select-item-option ant-select-item-option-active"][title="$ 500"]');
         //'.ant-select-item-option-content').contains("$ 500");
 }
-get AddCrimeCoverage(){
+get AddClimeCoverage(){
     return cy.get('input[type="radio"][name="coverage.cfc.addCrimeCoverage"]').eq(0);
 }
 get AddTechnologyErrorsandOmissions(){
@@ -366,7 +382,7 @@ get DataLockLimit(){
     return cy.get('span[class="ant-select-selection-placeholder"]').contains("Datalock Limit");
 }
 get SelectedDataLockLimit(){
-    return cy.get('.ant-select-item-option-content').contains("$ 100,000");
+    return cy.get('.ant-select-item-option-content').contains("$ 100,000"); 
 }
 get EveerestLimit(){
     return  cy.get('span[class="ant-select-selection-placeholder"]').contains("Everest Limit"); 
@@ -380,6 +396,12 @@ get DatalockRetention(){
 get SelectedDatalockRetention(){
     return cy.get('.ant-select-item-option-content').contains("$ 25,000");
 }
+
+get NextMonthOnCalender(){
+    return cy.get('button[class="ant-picker-header-next-btn"]');
+}
+
+
 
 } 
 module.exports=new AppFormPage();

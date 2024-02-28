@@ -2,6 +2,7 @@
 import AppFormPage from "../Pages/app-form-page.cy.js";
 //from 89 to 110 
 class AppFormTest{
+    // const x = new AppFormPage();
     SubmitAppFormForAllMarkets(){
 
     // Maggies's action  from 9 to 24
@@ -236,7 +237,7 @@ AppFormPage.PersonallyIdentifiableInfo.click({force :true});
     //cy.wait(5000);
     AppFormPage.Select_CoalitionRetention.click({force:true});
     // //cy.wait(5000);
-    // AppFormPage.AddCrimeCoverage.click();
+     AppFormPage.AddClimeCoverage.click();
     //cy.wait(5000);
     AppFormPage.AddTechnologyErrorsandOmissions.click();
     AppFormPage.GetQuoteButton.click();

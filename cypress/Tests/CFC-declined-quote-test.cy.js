@@ -28,6 +28,7 @@ class CFCDeclinedQuoteTest{
                 AppFormPage.GetQuoteButton.click();
                 QuoteScreenpage.QuotesHeader.should('be.visible');
                 QuoteScreenpage.StatusOfmarket.should('be.visible');
-}
+                // AppFormPage.GetQuoteButton.click();
+        }
 }
 module.exports=new CFCDeclinedQuoteTest();
