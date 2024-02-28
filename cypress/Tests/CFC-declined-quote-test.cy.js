@@ -27,7 +27,7 @@ class CFCDeclinedQuoteTest{
                 AppFormPage.AddCrimeCoverage.click();
                 AppFormPage.GetQuoteButton.click();
                 QuoteScreenpage.QuotesHeader.should('be.visible');
-                QuoteScreenpage.StatusOfmarket.should('be.visible');
+                QuoteScreenpage.StatusOfmarketReffered.should('be.visible');
                 // AppFormPage.GetQuoteButton.click();
         }
 }

@@ -1,9 +1,12 @@
 class AppFormPage{
-    // Getting Applicant name 
-   get jumpToApplicantSection()
-   {
+    // Remove Datalock market
+g
+   get jumpToApplicantSection(){
     return cy.get('button[class="tru-button link "]').contains("Applicant")
    }
+    get CloseDataLock(){
+        return cy.get('button[id="close-datalock"][class="tru-button default remove-tag"]').eq(0);
+    }
 
     get CloseDataLockIcon()
     {
@@ -37,7 +40,7 @@ get SelectLocktonOffice()
 get LegalCompanyName (){ return  cy.get('input[type="text"][placeholder="Legal Company name"]');}
 
     //selecting Trading name
-get TradingName (){ return cy.get('input[type="text"][placeholder="Legal Company name"]');}
+get TradingName (){ return cy.get('input[type="text"][placeholder="Trading Name (if different)"]');}
 
     //Selecting TradeType
 get TradeType(){return cy.get('[path="applicant.everest.tradeType"] > .tru-form-item');}
@@ -248,10 +251,12 @@ get EOLorEOSSegregated(){return cy.get('input[type="radio"][ name="cyberRisk.sha
 get BiometricRecords(){return cy.get('input[type="radio"][ name="cyberRisk.shared.biometricRecordsStorage"]').eq(0);};
 // geeting Applicant Is PCI Compliant -> selection Yes
 get PciCompliant(){return cy.get('input[type="radio"][ name="cyberRisk.shared.pciCompliant"]').eq(0);};
-/*// geeting Funds Transfer Dual Control -> with its 3 selection 
+// geeting Funds Transfer Dual Control -> with its 3 selection 
 get FundsTransferDualControl(){return cy.get('[path="cyberRisk.shared.secondConfirmationBeforeEft"] > .tru-form-item > .tru-column > .tru-single-select-arrow-wrapper > .ant-select ant-select-single ant-select-show-arrow > .ant-select-arrow')};
      // selection 1 Yes - all payments
     get SelectionYesAllPayment(){return cy.get('.ant-select-item-option-content')};
+    
+    /*
     // selection 2 Yes - above $5k only
     get YesAbove$5kOnly(){return cy.get('[id="rc_select_8_list_2"]')};
     // selection 3 Yes - above $25k only
@@ -337,7 +342,9 @@ get scrollToNextMonth(){
 }
 //Selection of date 
 get SelectedeffectiveDate(){
-    return cy.get('div[class="ant-picker-cell-inner"]').eq(32);//contains("29");
+
+return cy.get('div[class="ant-picker-cell-inner"]').contains("23");
+
 }
 //getting Beazly Limit
 get Beazlyalimit(){
@@ -375,35 +382,47 @@ get AddClimeCoverage(){
 get AddTechnologyErrorsandOmissions(){
     return cy.get('input[type="radio"][name="coverage.everest.technologyErrorsAndOmissions"]').eq(0);
 }
-get GetQuoteButton(){
-    return cy.contains("Get Quote");
-}
-get DataLockLimit(){
-    return cy.get('span[class="ant-select-selection-placeholder"]').contains("Datalock Limit");
-}
-get SelectedDataLockLimit(){
-    return cy.get('.ant-select-item-option-content').contains("$ 100,000"); 
-}
-get EveerestLimit(){
-    return  cy.get('span[class="ant-select-selection-placeholder"]').contains("Everest Limit"); 
-}
-get SelectedeverestLimit(){
-    return cy.get('.ant-select-item-option-content').contains("$1,000,000");
-}
-get DatalockRetention(){
-     return cy.get('span[class="ant-select-selection-placeholder"]').contains("Datalock Retention");
-}
-get SelectedDatalockRetention(){
-    return cy.get('.ant-select-item-option-content').contains("$ 25,000");
-}
-
-get NextMonthOnCalender(){
-    return cy.get('button[class="ant-picker-header-next-btn"]');
-}
 
 
 
-} 
+
+    // Quote Declined assertion
+get QuoteDeclined(){return cy.get('.slick-current > :nth-child(1) > .quote-column > .quote-details-wrapper > .quote-header-and-name-wrapper > .status-with-link > .quote-status').should('be.visible').contains('Declined');}
+
+    // Filter 
+    get Filter(){return cy.get('.filter-tags-wrapper > .tru-search-bar > .false')}  
+    get GetQuoteButton(){
+        return cy.contains("Get Quote");
+    }
+    get DataLockLimit(){
+        return cy.get('span[class="ant-select-selection-placeholder"]').contains("Datalock Limit");
+    }
+    get SelectedDataLockLimit(){
+        return cy.get('.ant-select-item-option-content').contains("$ 100,000");
+    }
+    get EveerestLimit(){
+        return  cy.get('span[class="ant-select-selection-placeholder"]').contains("Everest Limit"); 
+    }
+    get SelectedeverestLimit(){
+        return cy.get('.ant-select-item-option-content').contains("$1,000,000");
+    }
+    get DatalockRetention(){
+         return cy.get('span[class="ant-select-selection-placeholder"]').contains("Datalock Retention");
+    }
+    get SelectedDatalockRetention(){
+        return cy.get('.ant-select-item-option-content').contains("$ 25,000");
+    }
+    //displayed error schema 
+get ErrorSchema (){
+
+    return cy.get('input[class="false"][value="[error]"]');
+}
+//navigate to applicant
+get NavigateApplicantSection(){
+    cy.get('button[class="tru-button link "]').contains('Applicant');
+}
+
+}
 module.exports=new AppFormPage();
 
 
