@@ -294,6 +294,22 @@ get EffectiveDate(){
 get SelectedeffectiveDate(){
     return cy.get('div[class="ant-picker-cell-inner"]').contains("20");
 }
+
+
+
+// getting datalock limit 
+get Datalocklimit(){
+    return cy.get('.ant-select-selection-placeholder').contains("Datalock Limit");
+    //return cy.get('input[type="search"]').contains("Datalock Limit");
+}
+
+get SelectedDatalocklimit(){
+    return cy.get('span[class="ant-select-selection-search"]').contains("750,000");
+}
+
+
+
+
 //getting Beazly Limit
 get Beazlyalimit(){
     return cy.get('span[class="ant-select-selection-placeholder"]').contains("Beazly Limit");
