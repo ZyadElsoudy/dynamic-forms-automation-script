@@ -1,13 +1,13 @@
-import AppFormPage from "../Pages/app-form-page.cy.js";
+import AppFormPage from '../Pages/app-form-page.cy.js';
 
-class FilterTest{
-    SearchForField(){
-         AppFormPage.Filter.type('Name');
-         AppFormPage.ApplicantName.should('be.visible');
-         AppFormPage.LegalCompanyName.should('be.visible');
-         AppFormPage.TradingName.should('be.visible');
-         AppFormPage.AnnualRevenueLastFinancialYear.should('not.exist');
-    }
+class FilterTest {
+  SearchForField() {
+    AppFormPage.Filter.type('Name');
+    AppFormPage.ApplicantName.should('be.visible');
+    AppFormPage.LegalCompanyName.should('be.visible');
+    AppFormPage.TradingName.should('be.visible');
+    AppFormPage.AnnualRevenueLastFinancialYear.should('not.exist');
+  }
 }
 
 module.exports = new FilterTest();

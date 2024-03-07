@@ -1,7 +1,7 @@
-import QuoteScreenPage from "../Pages/quote-screen-page.cy";
-class logsTest{
-displayLogs(){
+import QuoteScreenPage from '../Pages/quote-screen-page.cy';
 
+class logsTest {
+  displayLogs() {
     cy.wait(5000);
     QuoteScreenPage.AllLogs.click();
     cy.wait(5000);
@@ -10,8 +10,6 @@ displayLogs(){
     QuoteScreenPage.CoalitionLogs.click();
     QuoteScreenPage.CFCLogs.click();
     QuoteScreenPage.EverestLogs.click();
-
+  }
 }
-
-}
-module.exports=new logsTest();
+module.exports = new logsTest();

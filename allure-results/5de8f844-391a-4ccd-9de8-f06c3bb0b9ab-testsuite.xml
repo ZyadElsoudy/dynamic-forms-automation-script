@@ -1,0 +1,26 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1709740474524' stop='1709740570945'>
+    <name></name>
+    <title></title>
+    <test-cases>
+        <test-case start='1709740474528' status='failed' stop='1709740570895'>
+            <name>Add new CFC And BBR Request and getting declined quote</name>
+            <title>Add new CFC And BBR Request and getting declined quote</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Timed out retrying after 60000ms: Expected to find content: 'Select Branch' within the element: &lt;span.ant-select-selection-item> but never did.
+                
+                Because this error occurred during a `before each` hook we are skipping all of the remaining tests.</message>
+                <stack-trace>AssertionError: Timed out retrying after 60000ms: Expected to find content: 'Select Branch' within the element: &lt;span.ant-select-selection-item> but never did.
+                
+                Because this error occurred during a `before each` hook we are skipping all of the remaining tests.
+                    at get SelectBranch (webpack:///./cypress/Pages/new-request-page.cy.js:8:67)
+                    at NewRequestTest.CreateNewRequest (webpack:///./cypress/Tests/new-request-test.cy.js:14:23)
+                    at Context.eval (webpack:///./cypress/Helpers/test-helper.cy.js:10:27)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

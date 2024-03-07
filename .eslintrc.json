@@ -1,0 +1,50 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:cypress/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "plugins": [
+    "json-format"
+  ],
+  "settings": {
+    "json/sort-package-json": "standard",
+    "json/ignore-files": [
+      "**/package/lock.json"
+    ],
+    "json/json-with-comments-files": [
+      "**/tsconfig.json",
+      ".vscode/**"
+    ],
+    "import/extensions": [
+      "warn",
+      "always",
+      {
+        "ignorePackages": true
+      }
+    ]
+  },
+  "rules": {
+    "import/no-dynamic-require": "off",
+    "no-unused-expressions": "warn",
+    "func-names": "off",
+    "no-console": "off",
+    "max-len": "off",
+    "global-require": "warn",
+    "no-plusplus": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-param-reassign": "off",
+    "class-methods-use-this": "off",
+    "no-restricted-imports": "off",
+    "no-restricted-modules": "off"
+  }
+}
