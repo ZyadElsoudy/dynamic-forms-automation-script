@@ -4,7 +4,7 @@ import AppFormPage from "../Pages/app-form-page.cy";
 class CFCandCoalitionRequestTest{
     SubmitCFCandCoalitionRequest(){
         AppFormPage.jumpToApplicantSection.click();
-        AppFormPage.CloseDatalock.click();
+        AppFormPage.CloseDataLock.click();
         AppFormPage.CloseBBR.click();
         AppFormPage.CloseEverest.click();
         AppFormPage.ApplicantName.type('Morine');

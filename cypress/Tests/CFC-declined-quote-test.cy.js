@@ -5,7 +5,7 @@ class CFCDeclinedQuoteTest{
         SubmitCFCRequestAndGettingDeclinedQuote(){
                 AppFormPage.jumpToApplicantSection.click();
                 cy.wait(5000)
-                AppFormPage.CloseDataLockIcon.click();
+                AppFormPage.CloseDataLock.click();
                 AppFormPage.CloseBBR.click();
                 AppFormPage.CloseCoallition.click();
                 AppFormPage.CloseEverest.click();
