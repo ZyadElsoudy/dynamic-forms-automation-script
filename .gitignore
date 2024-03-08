@@ -1,4 +1,5 @@
 /cypress/fixtures/Data.json
-/cypress/node_modules
 /cypress/videos
 /cypress/reporters
+/allure-report
+/allure-results

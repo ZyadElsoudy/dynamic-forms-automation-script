@@ -1,7 +1,7 @@
 import { it } from "mocha"
 import datalockAndCoalition from "../Tests/datalock-coalition-test.cy.js"; 
 import Helper from "../Helpers/test-helper.cy.js";
-describe('truMarket-New Us Request',()=>{
+
 
   Helper.CustomBeforeEach();
 
@@ -9,4 +9,3 @@ describe('truMarket-New Us Request',()=>{
       datalockAndCoalition.SubmitDatalockAndCoalition();
 
   }) 
-})

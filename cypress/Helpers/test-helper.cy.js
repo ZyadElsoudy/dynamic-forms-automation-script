@@ -3,7 +3,7 @@ import LoginTest from "../Tests/login-test.cy.js";
 import NewRequestTest from "../Tests/new-request-test.cy.js";
 class Helper{
     CustomBeforeEach() {
-        beforeEach(() => {
+        before(() => {
             cy.visit('https://bestinsurance.trumarket.dev');
             cy.fixture('Data.json').as('testData');
             LoginTest.LoginWithValidCredentials();

@@ -122,12 +122,13 @@ class AppFormTest{
        //cy.wait(5000);
        AppFormPage.SelectCoverage.click();
 // Morine's Actions  
+AppFormPage.JumpToCyberRiskSection.click();
 AppFormPage.PersonallyIdentifiableInfo.click({force :true});
         //cy.wait(5000);
         AppFormPage.EstimatePersonallyIdentifiableInfo.type(45);
         AppFormPage.MedicalRecords.click({force:true});
         AppFormPage.EstimateMedicalRecords.type(100);
-        AppFormPage.FinancialInformation.click();
+        AppFormPage.FinancialInformation.click({force:true});
         AppFormPage.EstimateFinancialInformation.type(25);
          AppFormPage.DriverLicenseNumber.click({force:true});
          //cy.wait(5000);
@@ -235,6 +236,10 @@ AppFormPage.PersonallyIdentifiableInfo.click({force :true});
 
     //cy.wait(5000);
     AppFormPage.Select_CoalitionRetention.click({force:true});
+    AppFormPage.DataLockLimit.click({force:true});
+        AppFormPage.SelectedDataLockLimit.click();
+        AppFormPage.EveerestLimit.click({force:true});
+        AppFormPage.SelectedeverestLimit.click();
     // //cy.wait(5000);
     // AppFormPage.AddCrimeCoverage.click();
     //cy.wait(5000);
