@@ -73,7 +73,8 @@ get Website(){ return cy.get('input[type="text"][placeholder="Website"]');}
 
     // Select Use Client data toggle
 get UseClientDataToggle(){return cy.get('[path="applicant.shared.sameAsClient"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch');}
-  
+get ClientContentName(){return cy.get('input[type="text"][placeholder="Client Contact Name"]');}
+get ClientEmailAddress(){return cy.get('input[type="text"][placeholder="Client Email Address"]');}
 
 
 // Sara's Section
@@ -152,7 +153,7 @@ get JumpToCyberRiskSection(){
     
         //Estimate Medical Records
         get EstimateMedicalRecords(){
-            return cy.get('input[class="tru-number-input"][placeholder="Estimate"]').eq(1);
+            return cy.get('input[class="tru-number-input"][placeholder="Estimate"]');
         }
     // "Financial information" field
     get FinancialInformation(){
@@ -274,7 +275,7 @@ get NumOfClaims (){
 }
 // getting Any single claim in excess of $25,000? 
 get ExceedingLimit(){
-    return cy.get('input[type="radio"][name="claims.shared.priorClaimsExcess25k"]').eq(0);   
+    return cy.get('input[type="radio"][name="claims.shared.priorClaimsExcess25k"]').eq(1);   
 }
 //getting Nature of the legal Action -> Just clicking to Display the list
 get NatureOflegalAction(){
@@ -392,6 +393,18 @@ get QuoteDeclined(){return cy.get('.slick-current > :nth-child(1) > .quote-colum
     }
     get SelectedDatalockRetention(){
         return cy.get('.ant-select-item-option-content').contains("$ 25,000");
+    }
+    get PaymentCardLiability(){
+        return cy.get('[path="coverage.datalock.pciDSSLiability"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch');
+    }
+    get ComputerHardwareCost(){
+        return cy.get('[path="coverage.datalock.bricking"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch');
+    }
+    get DigitalAssetAndBusinessInterruptionCosts(){
+        return cy.get('[path="coverage.datalock.digitalAssetLoss"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch');
+    }
+    get MultimediaLiability(){
+        return cy.get('[path="coverage.datalock.multiMediaLiability"] > .tru-form-item > .tru-column > .field-with-dependent-value > .tru-toggle-switch');
     }
     //displayed error schema 
 get ErrorSchema (){
