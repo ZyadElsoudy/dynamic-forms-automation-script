@@ -1,1 +1,56 @@
-{"uid":"25622be2d4c6324f","name":"An uncaught error was detected outside of a test","fullName":".An uncaught error was detected outside of a test","historyId":"52a12849550d3513996e41b83e83be38","time":{"start":1709800270060,"stop":1709800270343,"duration":283},"description":"","descriptionHtml":"","status":"broken","statusMessage":"The following error originated from your test code, not from Cypress.\n                \n                  > _appFormPageCy.default is not a constructor\n                \n                When Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n                \n                Cypress could not associate this error to any specific test.\n                \n                We dynamically generated a new test to display this failure.","statusTrace":"TypeError: The following error originated from your test code, not from Cypress.\n                \n                  > _appFormPageCy.default is not a constructor\n                \n                When Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n                \n                Cypress could not associate this error to any specific test.\n                \n                We dynamically generated a new test to display this failure.\n                    at ./cypress/Tests/CFC-and-BBR-Test.cy.js (webpack:///./cypress/Tests/CFC-and-BBR-Test.cy.js:4:23)\n                    at __webpack_require__ (webpack:///webpack/bootstrap:19:0)\n                    at eval (webpack:///./cypress/e2e/CFC-and-BBR-Spec.cy.js:3:0)\n                    at eval (http://localhost:50323/__cypress/tests?p=cypress\\e2e\\CFC-and-BBR-Spec.cy.js:25895:3)\n                    at eval (http://localhost:50323/__cypress/tests?p=cypress\\e2e\\CFC-and-BBR-Spec.cy.js:25897:12)\n                    at eval (<anonymous>)","flaky":false,"newFailed":false,"newBroken":false,"newPassed":false,"retriesCount":0,"retriesStatusChange":false,"beforeStages":[],"afterStages":[],"labels":[{"name":"suite","value":""},{"name":"testClass","value":""},{"name":"testMethod","value":"An uncaught error was detected outside of a test"},{"name":"package","value":""},{"name":"resultFormat","value":"allure1"}],"parameters":[],"links":[],"hidden":true,"retry":true,"extra":{"categories":[],"tags":[]},"source":"25622be2d4c6324f.json","parameterValues":[]}
+{
+  "uid": "25622be2d4c6324f",
+  "name": "An uncaught error was detected outside of a test",
+  "fullName": ".An uncaught error was detected outside of a test",
+  "historyId": "52a12849550d3513996e41b83e83be38",
+  "time": {
+    "start": 1709800270060,
+    "stop": 1709800270343,
+    "duration": 283
+  },
+  "description": "",
+  "descriptionHtml": "",
+  "status": "broken",
+  "statusMessage": "The following error originated from your test code, not from Cypress.\n                \n                  > _appFormPageCy.default is not a constructor\n                \n                When Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n                \n                Cypress could not associate this error to any specific test.\n                \n                We dynamically generated a new test to display this failure.",
+  "statusTrace": "TypeError: The following error originated from your test code, not from Cypress.\n                \n                  > _appFormPageCy.default is not a constructor\n                \n                When Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n                \n                Cypress could not associate this error to any specific test.\n                \n                We dynamically generated a new test to display this failure.\n                    at ./cypress/Tests/CFC-and-BBR-Test.cy.js (webpack:///./cypress/Tests/CFC-and-BBR-Test.cy.js:4:23)\n                    at __webpack_require__ (webpack:///webpack/bootstrap:19:0)\n                    at eval (webpack:///./cypress/e2e/CFC-and-BBR-Spec.cy.js:3:0)\n                    at eval (http://localhost:50323/__cypress/tests?p=cypress\\e2e\\CFC-and-BBR-Spec.cy.js:25895:3)\n                    at eval (http://localhost:50323/__cypress/tests?p=cypress\\e2e\\CFC-and-BBR-Spec.cy.js:25897:12)\n                    at eval (<anonymous>)",
+  "flaky": false,
+  "newFailed": false,
+  "newBroken": false,
+  "newPassed": false,
+  "retriesCount": 0,
+  "retriesStatusChange": false,
+  "beforeStages": [],
+  "afterStages": [],
+  "labels": [
+    {
+      "name": "suite",
+      "value": ""
+    },
+    {
+      "name": "testClass",
+      "value": ""
+    },
+    {
+      "name": "testMethod",
+      "value": "An uncaught error was detected outside of a test"
+    },
+    {
+      "name": "package",
+      "value": ""
+    },
+    {
+      "name": "resultFormat",
+      "value": "allure1"
+    }
+  ],
+  "parameters": [],
+  "links": [],
+  "hidden": true,
+  "retry": true,
+  "extra": {
+    "categories": [],
+    "tags": []
+  },
+  "source": "25622be2d4c6324f.json",
+  "parameterValues": []
+}

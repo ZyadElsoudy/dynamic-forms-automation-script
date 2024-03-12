@@ -1,1 +1,44 @@
-{"uid":"b1a8273437954620fa374b796ffaacdd","name":"behaviors","children":[{"name":"Add new CFC And BBR Request and getting declined quote","uid":"ad87c8c05f1e781d","parentUid":"b1a8273437954620fa374b796ffaacdd","status":"failed","time":{"start":1709740474528,"stop":1709740570895,"duration":96367},"flaky":false,"newFailed":false,"newPassed":false,"newBroken":false,"retriesCount":0,"retriesStatusChange":false,"parameters":[],"tags":[]},{"name":"An uncaught error was detected outside of a test","uid":"dc6f79bafd6cd8ce","parentUid":"b1a8273437954620fa374b796ffaacdd","status":"broken","time":{"start":1709800390911,"stop":1709800391209,"duration":298},"flaky":false,"newFailed":false,"newPassed":false,"newBroken":false,"retriesCount":2,"retriesStatusChange":false,"parameters":[],"tags":[]}]}
+{
+  "uid": "b1a8273437954620fa374b796ffaacdd",
+  "name": "behaviors",
+  "children": [
+    {
+      "name": "Add new CFC And BBR Request and getting declined quote",
+      "uid": "ad87c8c05f1e781d",
+      "parentUid": "b1a8273437954620fa374b796ffaacdd",
+      "status": "failed",
+      "time": {
+        "start": 1709740474528,
+        "stop": 1709740570895,
+        "duration": 96367
+      },
+      "flaky": false,
+      "newFailed": false,
+      "newPassed": false,
+      "newBroken": false,
+      "retriesCount": 0,
+      "retriesStatusChange": false,
+      "parameters": [],
+      "tags": []
+    },
+    {
+      "name": "An uncaught error was detected outside of a test",
+      "uid": "dc6f79bafd6cd8ce",
+      "parentUid": "b1a8273437954620fa374b796ffaacdd",
+      "status": "broken",
+      "time": {
+        "start": 1709800390911,
+        "stop": 1709800391209,
+        "duration": 298
+      },
+      "flaky": false,
+      "newFailed": false,
+      "newPassed": false,
+      "newBroken": false,
+      "retriesCount": 2,
+      "retriesStatusChange": false,
+      "parameters": [],
+      "tags": []
+    }
+  ]
+}

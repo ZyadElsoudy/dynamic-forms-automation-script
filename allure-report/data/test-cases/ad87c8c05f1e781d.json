@@ -1,1 +1,64 @@
-{"uid":"ad87c8c05f1e781d","name":"Add new CFC And BBR Request and getting declined quote","fullName":".Add new CFC And BBR Request and getting declined quote","historyId":"9f19d2559e9fe91ebf959b39a6669071","time":{"start":1709740474528,"stop":1709740570895,"duration":96367},"description":"","descriptionHtml":"","status":"failed","statusMessage":"Timed out retrying after 60000ms: Expected to find content: 'Select Branch' within the element: <span.ant-select-selection-item> but never did.\n                \n                Because this error occurred during a `before each` hook we are skipping all of the remaining tests.","statusTrace":"AssertionError: Timed out retrying after 60000ms: Expected to find content: 'Select Branch' within the element: <span.ant-select-selection-item> but never did.\n                \n                Because this error occurred during a `before each` hook we are skipping all of the remaining tests.\n                    at get SelectBranch (webpack:///./cypress/Pages/new-request-page.cy.js:8:67)\n                    at NewRequestTest.CreateNewRequest (webpack:///./cypress/Tests/new-request-test.cy.js:14:23)\n                    at Context.eval (webpack:///./cypress/Helpers/test-helper.cy.js:10:27)","flaky":false,"newFailed":false,"newBroken":false,"newPassed":false,"retriesCount":0,"retriesStatusChange":false,"beforeStages":[],"afterStages":[],"labels":[{"name":"suite","value":""},{"name":"testClass","value":""},{"name":"testMethod","value":"Add new CFC And BBR Request and getting declined quote"},{"name":"package","value":""},{"name":"resultFormat","value":"allure1"}],"parameters":[],"links":[],"hidden":false,"retry":false,"extra":{"severity":"normal","retries":[],"categories":[{"name":"Product defects","matchedStatuses":[],"flaky":false}],"tags":[]},"source":"ad87c8c05f1e781d.json","parameterValues":[]}
+{
+  "uid": "ad87c8c05f1e781d",
+  "name": "Add new CFC And BBR Request and getting declined quote",
+  "fullName": ".Add new CFC And BBR Request and getting declined quote",
+  "historyId": "9f19d2559e9fe91ebf959b39a6669071",
+  "time": {
+    "start": 1709740474528,
+    "stop": 1709740570895,
+    "duration": 96367
+  },
+  "description": "",
+  "descriptionHtml": "",
+  "status": "failed",
+  "statusMessage": "Timed out retrying after 60000ms: Expected to find content: 'Select Branch' within the element: <span.ant-select-selection-item> but never did.\n                \n                Because this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+  "statusTrace": "AssertionError: Timed out retrying after 60000ms: Expected to find content: 'Select Branch' within the element: <span.ant-select-selection-item> but never did.\n                \n                Because this error occurred during a `before each` hook we are skipping all of the remaining tests.\n                    at get SelectBranch (webpack:///./cypress/Pages/new-request-page.cy.js:8:67)\n                    at NewRequestTest.CreateNewRequest (webpack:///./cypress/Tests/new-request-test.cy.js:14:23)\n                    at Context.eval (webpack:///./cypress/Helpers/test-helper.cy.js:10:27)",
+  "flaky": false,
+  "newFailed": false,
+  "newBroken": false,
+  "newPassed": false,
+  "retriesCount": 0,
+  "retriesStatusChange": false,
+  "beforeStages": [],
+  "afterStages": [],
+  "labels": [
+    {
+      "name": "suite",
+      "value": ""
+    },
+    {
+      "name": "testClass",
+      "value": ""
+    },
+    {
+      "name": "testMethod",
+      "value": "Add new CFC And BBR Request and getting declined quote"
+    },
+    {
+      "name": "package",
+      "value": ""
+    },
+    {
+      "name": "resultFormat",
+      "value": "allure1"
+    }
+  ],
+  "parameters": [],
+  "links": [],
+  "hidden": false,
+  "retry": false,
+  "extra": {
+    "severity": "normal",
+    "retries": [],
+    "categories": [
+      {
+        "name": "Product defects",
+        "matchedStatuses": [],
+        "flaky": false
+      }
+    ],
+    "tags": []
+  },
+  "source": "ad87c8c05f1e781d.json",
+  "parameterValues": []
+}

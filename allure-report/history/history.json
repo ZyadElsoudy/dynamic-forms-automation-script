@@ -1,1 +1,46 @@
-{"52a12849550d3513996e41b83e83be38":{"statistic":{"failed":0,"broken":1,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"dc6f79bafd6cd8ce","status":"broken","statusDetails":"The following error originated from your test code, not from Cypress.\n                \n                  > _appFormPageCy.default is not a constructor\n                \n                When Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n                \n                Cypress could not associate this error to any specific test.\n                \n                We dynamically generated a new test to display this failure.","time":{"start":1709800390911,"stop":1709800391209,"duration":298}}]},"9f19d2559e9fe91ebf959b39a6669071":{"statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"ad87c8c05f1e781d","status":"failed","statusDetails":"Timed out retrying after 60000ms: Expected to find content: 'Select Branch' within the element: <span.ant-select-selection-item> but never did.\n                \n                Because this error occurred during a `before each` hook we are skipping all of the remaining tests.","time":{"start":1709740474528,"stop":1709740570895,"duration":96367}}]}}
+{
+  "52a12849550d3513996e41b83e83be38": {
+    "statistic": {
+      "failed": 0,
+      "broken": 1,
+      "skipped": 0,
+      "passed": 0,
+      "unknown": 0,
+      "total": 1
+    },
+    "items": [
+      {
+        "uid": "dc6f79bafd6cd8ce",
+        "status": "broken",
+        "statusDetails": "The following error originated from your test code, not from Cypress.\n                \n                  > _appFormPageCy.default is not a constructor\n                \n                When Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n                \n                Cypress could not associate this error to any specific test.\n                \n                We dynamically generated a new test to display this failure.",
+        "time": {
+          "start": 1709800390911,
+          "stop": 1709800391209,
+          "duration": 298
+        }
+      }
+    ]
+  },
+  "9f19d2559e9fe91ebf959b39a6669071": {
+    "statistic": {
+      "failed": 1,
+      "broken": 0,
+      "skipped": 0,
+      "passed": 0,
+      "unknown": 0,
+      "total": 1
+    },
+    "items": [
+      {
+        "uid": "ad87c8c05f1e781d",
+        "status": "failed",
+        "statusDetails": "Timed out retrying after 60000ms: Expected to find content: 'Select Branch' within the element: <span.ant-select-selection-item> but never did.\n                \n                Because this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+        "time": {
+          "start": 1709740474528,
+          "stop": 1709740570895,
+          "duration": 96367
+        }
+      }
+    ]
+  }
+}
